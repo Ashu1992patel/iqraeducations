@@ -178,6 +178,10 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
 
+        // Custom
+        'Barryvdh\Debugbar\ServiceProvider',
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+
     ],
 
     /*
@@ -231,6 +235,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // Custom
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 
