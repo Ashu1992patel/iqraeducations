@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zxx">
     <head>
-       @include('frontendview.common.head')
+       @include('frontend.common.head')
     </head>
     <body class="home5">
         <!--Preloader area start here-->
-        @include('frontendview.common.preloader')
+        @include('frontend.common.preloader')
 		<!--Preloader area end here-->
 		
         <!--Full width header Start-->
         <div class="full-width-header">
             <!-- Toolbar Start -->
-            @include('frontendview.common.toolbar')
+            @include('frontend.common.toolbar')
             <!-- Toolbar End -->
             
             <!--Header Start-->
-            @include('frontendview.common.header')
+            @include('frontend.common.header')
             <!--Header End-->
         
         </div>
@@ -24,9 +24,13 @@
 		<!-- Content Starts here -->
         @yield('content')
 		<!-- Content Ends here -->
+
+        <!-- Partner Start -->
+        @include('frontend.common.partners')
+        <!-- Partner End -->
        
         <!-- Footer Start -->
-        @include('frontendview.common.footer')
+        @include('frontend.common.footer')
         <!-- Footer End -->
 
         <!-- start scrollUp  -->
@@ -35,13 +39,13 @@
         </div>
 		
 		<!-- Canvas Menu start -->
-        @include('frontendview.common.canvas-menu-nav')
+        @include('frontend.common.canvas-menu-nav')
         <!-- Canvas Menu end -->
         
         <!-- Search Modal Start -->
-        @include('frontendview.common.search-modal')
+        @include('frontend.common.search-modal')
         <!-- Search Modal End --> 
         
-        @include('frontendview.common.scripts')
+        @include('frontend.common.scripts')
     </body>
 </html>

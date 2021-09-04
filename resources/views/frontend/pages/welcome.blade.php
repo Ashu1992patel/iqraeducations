@@ -1,47 +1,47 @@
-@extends('frontendview.index')
+@extends('frontend.master')
 @section('title', 'Welcome')
 @section('content')
     <!-- Slider Area Start -->
-    @include('frontendview.common.slider-area')
+    @include('frontend.common.slider-area')
     <!-- Slider Area End -->
     
     <!-- Services Start -->
-    @include('frontendview.common.services')
+    @include('frontend.common.services')
     <!-- Services End -->
 
     <!-- About Us Start -->
-    @include('frontendview.common.about-us')
+    @include('frontend.common.about-us')
     <!-- About Us End -->
     
     <!-- Counter Up Section Start-->
-    @include('frontendview.common.counter')
+    @include('frontend.common.counter')
     <!-- Counter Down Section End -->
 
     <!-- Courses Start -->
-    @include('frontendview.common.courses')
+    @include('frontend.common.courses')
     <!-- Courses End -->
     
     <!-- Team Start -->
-    @include('frontendview.common.team')
+    @include('frontend.common.team')
     <!-- Team End -->
 
     <!-- Events Start -->
-    @include('frontendview.common.events')
+    @include('frontend.common.events')
     <!-- Events End -->
     
     <!-- Testimonial Start -->
-    @include('frontendview.common.testimonial')
+    @include('frontend.common.testimonial')
     <!-- Testimonial End -->
 
     <!-- Latest News Start -->
-    @include('frontendview.common.latest-news')
+    @include('frontend.common.latest-news')
     <!-- Latest News End -->
     
     <!-- RS Gallery section start -->
-    @include('frontendview.common.gallery')
+    @include('frontend.common.gallery')
     <!-- RS Gallery section end -->
     
     <!-- Partner Start -->
-    @include('frontendview.common.partners')
+    @include('frontend.common.partners')
     <!-- Partner End -->
 @endsection

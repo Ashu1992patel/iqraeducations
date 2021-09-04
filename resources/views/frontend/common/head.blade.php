@@ -7,6 +7,7 @@
  <!-- responsive tag -->
  <meta http-equiv="x-ua-compatible" content="ie=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="IQRA Education foundation provide eduaction to read & learn i.e. THE QURAN, ARBI, URDU etc.">
  <!-- favicon -->
  <link rel="apple-touch-icon" href="apple-touch-icon.png">
  <link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend') }}/images/fav5.png">
@@ -29,6 +30,8 @@
  <link rel="stylesheet" type="text/css" href="{{ url('frontend') }}/fonts/flaticon.css">
  <!-- flaticon2 css  -->
  <link rel="stylesheet" type="text/css" href="{{ url('frontend') }}/fonts/fonts2/flaticon.css">
+  <!-- timeline css -->
+  <link rel="stylesheet" type="text/css" href="{{ url('frontend') }}/css/timeline.css">
  <!-- rsmenu CSS -->
  <link rel="stylesheet" type="text/css" href="{{ url('frontend') }}/css/rsmenu-main.css">
  <!-- rsmenu transitions CSS -->
@@ -41,3 +44,5 @@
      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
  <![endif]-->
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

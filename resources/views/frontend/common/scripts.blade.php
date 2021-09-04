@@ -25,3 +25,5 @@
 <script src="{{ url('frontend') }}/js/plugins.js"></script>
  <!-- main js -->
 <script src="{{ url('frontend') }}/js/main.js"></script>
+
+@yield('scripts')
