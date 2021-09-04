@@ -38,11 +38,31 @@
                                 <li class="{{ request()->is('courses') ? 'current_page_item' : '' }}"> 
                                     <a href="{{ route('courses') }}">Courses</a>
                                     <ul class="sub-menu"> 
-                                        <li class="menu-item-has-children"> <a href="#">Gallery</a>
+                                        <li class="menu-item-has-children"> <a href="#">Catgeory 1</a>
                                           <ul class="sub-menu">
-                                            <li> <a href="gallery.html">Gallery One</a> </li>
-                                            <li> <a href="gallery2.html">Gallery Two</a> </li> 
-                                            <li> <a href="gallery3.html">Gallery Three</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course One</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
+                                            <li> <a href="{{ route('welcome') }}">Course Three</a> </li>
+                                          </ul>
+                                        </li>                                        
+                                        <li class="menu-item-has-children"> <a href="#">Catgeory 2</a>
+                                          <ul class="sub-menu">
+                                            <li> <a href="{{ route('welcome') }}">Course One</a> </li>
+                                          </ul>
+                                        </li>                                        
+                                        <li class="menu-item-has-children"> <a href="#">Catgeory 3</a>
+                                          <ul class="sub-menu">
+                                            <li> <a href="{{ route('welcome') }}">Course One</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
+                                            <li> <a href="{{ route('welcome') }}">Course Three</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course Four</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course Five</a> </li>
+                                          </ul>
+                                        </li>                                        
+                                        <li class="menu-item-has-children"> <a href="#">Catgeory 4</a>
+                                          <ul class="sub-menu">
+                                            <li> <a href="{{ route('welcome') }}">Course One</a> </li>
+                                            <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
                                           </ul>
                                         </li>                                        
                                     </ul>
