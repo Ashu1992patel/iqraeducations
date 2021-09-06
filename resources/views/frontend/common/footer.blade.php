@@ -9,8 +9,8 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-desc">
-                            503  Old Buffalo Street<br>
-                            Northwest #205, New York-3087
+                            Maulana Ward No. 7, Panchampura<br>
+                            Near Madar Gate, Katangi, Jabalpur, MP
                         </p>
                     </div>
                 </div>
@@ -19,8 +19,8 @@
                         <i class="fa fa-phone"></i>
                         <h4 class="contact-title">Phone Number</h4>
                         <p class="contact-desc">
-                            +3453-909-6565<br>
-                            +2390-875-2235
+                            ‎+91-8109223848<br>
+                            ‎+91-8109223849
                         </p>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Email Address</h4>
                         <p class="contact-desc">
-                            infoname@gmail.com<br>
-                            www.yourname.com
+                            info@iqraeducations.com<br>
+                            www.iqraeducations.com
                         </p>
                     </div>
                 </div>
@@ -42,58 +42,47 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-12">
+                <div class="col-lg-6 col-md-12">
                     <div class="about-widget">
-                        <img src="{{ url('frontend') }}/images/logo-footer2.png" alt="Footer Logo">
-                        <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the elegance of unique.</p>
-                        <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
+                        {{-- <img src="{{ url('frontend') }}/images/logo-footer2.png" alt="Footer Logo"> --}}
+                        <img src="{{ url('frontend') }}/images/iqra/logo22.png" alt="Footer Logo" style="max-width: 30%">
+                        <p>
+                            {{-- Iqra Islamic Education Centre  --}}
+                            Our vision is to reform our offsprings with the islamic culture along with  professional education.
+                            We are coming with various education which includes Quran, Urdu,arbi,hindi, English, Maths, Chemistry,Phisics  Biology , 10th and 12th
+                        </p>
+                        <p class="margin-remove">
+                            Students can choose their respective subject and join our batches.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12">
-                    <h5 class="footer-title">RECENT POSTS</h5>
-                    <div class="recent-post-widget">
-                        <div class="post-item">
-                            <div class="post-date">
-                                <span>28</span>
-                                <span>June</span>
-                            </div>
-                            <div class="post-desc">
-                                <h5 class="post-title"><a href="#">While the lovely valley team work</a></h5>
-                                <span class="post-category">Keyword Analysis</span>
-                            </div>
-                        </div>
-                        <div class="post-item">
-                            <div class="post-date">
-                                <span>28</span>
-                                <span>June</span>
-                            </div>
-                            <div class="post-desc">
-                                <h5 class="post-title"><a href="#">I must explain to you how all this idea</a></h5>
-                                <span class="post-category">Spoken English</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="col-lg-3 col-md-12">
                     <h5 class="footer-title">OUR SITEMAP</h5>
                     <ul class="sitemap-widget">
-                        <li class="active"><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
-                        <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                        <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
-                        <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
-                        <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
-                        <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>                                
-                        <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                        <li><a href="blog-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog Details</a></li>
-                        <li><a href="teachers.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a></li>
-                        <li><a href="teachers-single.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers Details</a></li>
-                        <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
-                        <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>
+                        <li class="active">
+                            <a href="{{ route('welcome') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a>
+                        </li>
+                        <li >
+                            <a href="{{ route('about') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('courses') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a>
+                        </li>                        
+                        <li>
+                            <a href="{{ route('teachers') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contact') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('registration') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Registration</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12">
                     <h5 class="footer-title">NEWSLETTER</h5>
-                    <p>Sign Up to Our Newsletter to Get Latest Updates &amp; Services</p>
+                    <p>Subscribe to Our Newsletter to Get Latest Updates</p>
                     <form class="news-form">
                         <input type="text" class="form-input" placeholder="Enter Your Email">
                         <button type="submit" class="form-button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
@@ -116,7 +105,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                <p>© 2018 <a href="#">RS Theme</a>. All Rights Reserved.</p>
+                <p>© 2021 <a href="https://iqraeducations.com">IQRA EDUCATION</a>. All Rights Reserved.</p>
             </div>
         </div>
     </div>

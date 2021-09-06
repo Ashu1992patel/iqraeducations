@@ -34,14 +34,10 @@
     <!-- Testimonial End -->
 
     <!-- Latest News Start -->
-    @include('frontend.common.latest-news')
+    {{-- @include('frontend.common.latest-news') --}}
     <!-- Latest News End -->
     
     <!-- RS Gallery section start -->
     @include('frontend.common.gallery')
     <!-- RS Gallery section end -->
-    
-    <!-- Partner Start -->
-    @include('frontend.common.partners')
-    <!-- Partner End -->
 @endsection

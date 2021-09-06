@@ -5,15 +5,15 @@
                 <div class="rs-toolbar-left">
                     <div class="welcome-message">
                         <i class="glyph-icon flaticon-placeholder"></i>
-                        <span>Edulearn NYC, USA</span> 
+                        <span>Katangi, Jabalpur, Mp, India</span> 
                     </div>
                     <div class="welcome-message">
                         <i class="glyph-icon flaticon-phone-call"></i>
-                        <span><a href="tel:1234567890">+1234-567-890</a></span> 
+                        <span><a href="tel:+9148109223848">+91-8109223848</a></span> 
                     </div>
                     <div class="welcome-message">
                         <i class="glyph-icon flaticon-email"></i>
-                        <span><a href="mailto:info@domain.com">info@domain.com</a></span> 
+                        <span><a href="mailto:info@iqraeducations.com">info@iqraeducations.com</a></span> 
                     </div>
                 </div>
             </div>

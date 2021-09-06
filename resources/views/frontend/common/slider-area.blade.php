@@ -3,6 +3,7 @@
         <!-- Item 1 -->
         <div class="item active">
             <img src="{{ url('frontend') }}/images/slider/home5/1_1.jpg" alt="Slide1" />
+            {{-- <img src="{{ url('frontend') }}/images/iqra/5.jpg" alt="Slide1" style="max-width:1833px;max-hieght:758px"  /> --}}
             <div class="slide-content">
                 <div class="display-table">
                     <div class="display-table-cell">
@@ -19,6 +20,7 @@
         <!-- Item 2 -->
         <div class="item">
             <img src="{{ url('frontend') }}/images/slider/home5/1_2.jpg" alt="Slide2" />
+            {{-- <img src="{{ url('frontend') }}/images/iqra/6.jpg" alt="Slide2" style="max-width:1833px;max-hieght:758px" /> --}}
             <div class="slide-content">
                 <div class="display-table">
                     <div class="display-table-cell">

@@ -53,8 +53,16 @@
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Subject </label>
-                                <input name="subject" id="subject" class="form-control" type="text">
+                                <label>Preferred Course </label>
+                                <select name="course" id="course" class="form-control">
+                                    <option value="-1">-Select Course-</option>
+                                    <option value="1">Quran with Nazira with/without Urdu Language (Live)</option>
+                                    <option value="2">Urdu Language (Live)</option>
+                                    <option value="3">Arabic language (Live)</option>
+                                    <option value="4">Hifz e Quran (Live)</option>
+                                    <option value="5">Qirat (Live)</option>
+                                    <option value="6">Short Dars-e-Nizami (Live)</option>
+                                </select>
                             </div>
                         </div>
                     </div>
