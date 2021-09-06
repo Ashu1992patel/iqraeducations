@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="">
                     {{-- <div class="logo-area"> --}}
-                        <a href="{{ route('welcome') }}">
+                        <a href="https://iqraeducations.com/">
                             {{-- <img src="{{ url('frontend') }}/images/logo2.png" alt="logo" height="34" width="173"> --}}
                             <img src="{{ url('frontend') }}/images/iqra/logo22.png" alt="logo" style="max-width: 40%">
                         </a>
