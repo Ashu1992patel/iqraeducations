@@ -10,7 +10,7 @@
  <meta name="description" content="IQRA Education foundation provide eduaction to read & learn i.e. THE QURAN, ARBI, URDU etc.">
  <!-- favicon -->
  <link rel="apple-touch-icon" href="apple-touch-icon.png">
- <link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend') }}/images/fav5.png">
+ <link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend') }}/images/iqra/favicon01.ico">
  <!-- bootstrap v4 css -->
  <link rel="stylesheet" type="text/css" href="{{ url('frontend') }}/css/bootstrap.min.css">
  <!-- font-awesome css -->

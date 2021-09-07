@@ -25,7 +25,7 @@
 <!-- Contact Section Start -->
 <div class="contact-page-section sec-spacer">
     <div class="container">
-        <div id="googleMap"></div>
+        {{-- <div id="googleMap"></div> --}}
         <div class="row contact-address-section">
             <div class="col-md-4 pl-0">
                 <div class="contact-info contact-address">

@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="about-img">
-                    <img src="{{ url('frontend') }}/images/about/about3.jpg" alt="img02"/>
+                    {{-- <img src="{{ url('frontend') }}/images/about/about3.jpg" alt="img02"/> --}}
+                    <img src="{{ url('frontend') }}/images/iqra/about.png" alt="img02"/>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">

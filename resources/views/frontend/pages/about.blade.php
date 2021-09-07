@@ -28,7 +28,8 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 rs-vertical-bottom mobile-mb-50">
                 <a href="#">
-                    <img src="{{ url('frontend') }}/images/about/history.jpg" alt="History Image"/>
+                    {{-- <img src="{{ url('frontend') }}/images/about/history.jpg" alt="History Image"/> --}}
+                    <img src="{{ url('frontend') }}/images/iqra/about.png" alt="History Image"/>                    
                 </a>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -64,12 +65,14 @@
                 <div class="row">
                     <div class="col-md-6 mobile-mb-30">
                         <a href="#">
-                            <img src="{{ url('frontend') }}/images/about/mission1.jpg" alt="Mission Image"/>
+                            {{-- <img src="{{ url('frontend') }}/images/about/mission1.jpg" alt="Mission Image"/> --}}
+                            <img src="{{ url('frontend') }}/images/iqra/partner-logo3.png" alt="Mission Image"/>
                         </a> 
                     </div>
                     <div class="col-md-6">
                         <a href="#">
-                            <img src="{{ url('frontend') }}/images/about/mission2.jpg" alt="Mission Image"/>
+                            {{-- <img src="{{ url('frontend') }}/images/about/mission2.jpg" alt="Mission Image"/> --}}
+                            <img src="{{ url('frontend') }}/images/iqra/partner-logo2.png" alt="Mission Image"/>
                         </a>                 			
                     </div>
                 </div>
@@ -85,8 +88,9 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 mobile-mb-50">
                 <div class="vision-img rs-animation-hover">
-                    <img src="{{ url('frontend') }}/images/about/vision.jpg" alt="img02"/>
-                    <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon">
+                    {{-- <img src="{{ url('frontend') }}/images/about/vision.jpg" alt="img02"/> --}}
+                    <img src="{{ url('frontend') }}/images/iqra/partner-logo1.png" alt="Mission Image" class="mt-10"/>
+                    {{-- <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon"> --}}
                     </a>
                     <div class="overly-border"></div>
                 </div>
@@ -114,7 +118,7 @@
                 <h2 class="white-color">WEB DESIGN &amp; DEVLOPMENT COURSE</h2>      
                 <p class="white-color">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.</p>
             </div>
-            <a class="cta-button" href="#">Join Now</a>
+            <a class="cta-button" href="{{ route('registration') }}">Join Now</a>
         </div>
     </div>
 </div>
@@ -209,7 +213,7 @@
 <!-- Team End -->
 
 <!-- Branches Start -->
-<div id="rs-branches" class="rs-branches sec-color pt-100 pb-70">
+{{-- <div id="rs-branches" class="rs-branches sec-color pt-100 pb-70">
     <div class="container">
         <div class="abt-title mb-70 text-center">
             <h2>OUR BRANCHES</h2>      
@@ -270,7 +274,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Branches End -->
 
 @endsection

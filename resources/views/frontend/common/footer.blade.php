@@ -45,7 +45,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="about-widget">
                         {{-- <img src="{{ url('frontend') }}/images/logo-footer2.png" alt="Footer Logo"> --}}
-                        <img src="{{ url('frontend') }}/images/iqra/logo22.png" alt="Footer Logo" style="max-width: 30%">
+                        <img src="{{ url('frontend') }}/images/iqra/logo33.png" alt="Footer Logo" style="max-width: 30%">
                         <p>
                             {{-- Iqra Islamic Education Centre  --}}
                             Our vision is to reform our offsprings with the islamic culture along with  professional education.

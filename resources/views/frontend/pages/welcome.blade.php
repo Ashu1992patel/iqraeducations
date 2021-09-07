@@ -26,7 +26,7 @@
     <!-- Team End -->
 
     <!-- Events Start -->
-    @include('frontend.common.events')
+    @include('frontend.common.branches')
     <!-- Events End -->
     
     <!-- Testimonial Start -->
