@@ -183,7 +183,8 @@ return [
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         App\Providers\HelperServiceProvider::class,
-        'Barryvdh\Debugbar\ServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
     ],
 
@@ -243,7 +244,8 @@ return [
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'Helper' => App\Helpers\Helper::class,
-        'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
 
     ],
 

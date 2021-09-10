@@ -1,4 +1,4 @@
-<div id="rs-team" class="rs-team blue-bg bg8 sec-spacer">
+<div id="rs-team" class="rs-team bg8 sec-spacer">
     <div class="blue-overlay"></div>
     <div class="container">
         <div class="sec-title mb-50 text-center">

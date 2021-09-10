@@ -25,5 +25,31 @@
 <script src="{{ url('frontend') }}/js/plugins.js"></script>
  <!-- main js -->
 <script src="{{ url('frontend') }}/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+{{-- https://github.com/CodeSeven/toastr --}}
+@if ($errors->any())
+     @foreach ($errors->all() as $error)
+         <script>
+            // Display an error toast, with a title
+            toastr.error("{{$error}}", 'Inconceivable!')
+        </script>
+     @endforeach
+ @endif
+
+ @if(session('success'))
+    <script>
+        // Display an error toast, with a title
+        toastr.success("{{session('success')}}", 'Miracle Max Says', {timeOut: 5000})
+    </script>
+@endif
+
+@if(session('error'))
+    <script>
+        // Display an error toast, with a title
+        toastr.error("{{session('error')}}", 'Inconceivable!')
+    </script>
+@endif
 
 @yield('scripts')

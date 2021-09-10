@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'cf40cc11b5750092be90e018893de4a4fc9fd3e6',
+        'reference' => '06c484e8f8d64297c69076e25fc8ad6fbd15f954',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -44,7 +44,7 @@
             'install_path' => __DIR__ . '/../barryvdh/laravel-debugbar',
             'aliases' => array(),
             'reference' => '70b89754913fd89fef16d0170a91dbc2a5cd633a',
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
@@ -463,7 +463,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'cf40cc11b5750092be90e018893de4a4fc9fd3e6',
+            'reference' => '06c484e8f8d64297c69076e25fc8ad6fbd15f954',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -563,7 +563,7 @@
             'install_path' => __DIR__ . '/../maximebf/debugbar',
             'aliases' => array(),
             'reference' => '0a3532556be0145603f8a9de23e76dc28eed7054',
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'mobiledetect/mobiledetectlib' => array(
             'pretty_version' => '2.8.37',
@@ -1146,7 +1146,7 @@
             'install_path' => __DIR__ . '/../symfony/debug',
             'aliases' => array(),
             'reference' => '2f9160e92eb64c95da7368c867b663a8e34e980c',
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/deprecation-contracts' => array(
             'pretty_version' => 'v2.4.0',

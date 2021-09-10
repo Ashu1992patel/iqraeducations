@@ -74,10 +74,20 @@
                                             <a href="#">
                                               {{ $category->name }}
                                              </a>
-                                            <ul class="sub-menu">
-                                              <li> <a href="{{ route('welcome') }}">Course One</a> </li>
-                                              <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
-                                              <li> <a href="{{ route('welcome') }}">Course Three</a> </li>
+                                             <ul class="sub-menu">
+                                                @forelse($category->courses as $course)
+                                                <li>
+                                                    <a href="{{ route('course/description') }}">
+                                                        {{ $course->name }}
+                                                    </a>
+                                                </li> 
+                                                @empty
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        No Courses Available
+                                                    </a>
+                                                </li>
+                                                @endforelse
                                             </ul>
                                           </li>                                        
                                           @endforeach
@@ -85,11 +95,11 @@
                                 </li>                                
                                 <!--Courses Menu End-->
 
-                                <!--Events Menu Start-->
-                                <li class="{{ request()->is('teachers') ? 'current_page_item' : '' }}"> 
+                                <!--Teachers Menu Start-->
+                                {{-- <li class="{{ request()->is('teachers') ? 'current_page_item' : '' }}"> 
                                     <a href="{{ route('teachers') }}">Teachers</a>
-                                </li>
-                                <!--Events Menu End-->
+                                </li> --}}
+                                <!--Teachers Menu End-->
 
                                 <!--Contact Menu Start-->
                                 <li class="{{ request()->is('contact') ? 'current_page_item' : '' }}"> 
@@ -108,9 +118,22 @@
                                 <!--checkout Menu End-->
                             </ul>
                         </nav>
+                        @auth()
                         <div class="apply-box">
-                            <a href="{{ route('registration') }}" class="apply-btn">Register Now</a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a class="apply-btn" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                this.closest('form').submit(); " role="button">
+                                    <i class="fa fa-sign-out"></i>
+                                    {{ __('Log Out') }}
+                                </a>
+                            </form>                            
                         </div>
+                        @else
+                        <div class="apply-box">
+                            <a href="{{ route('registration') }}" class="apply-btn">Login/Register</a>
+                        </div>
+                        @endauth
                 </div>
             </div>
             </div>

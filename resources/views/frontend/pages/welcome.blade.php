@@ -22,7 +22,7 @@
     <!-- Courses End -->
     
     <!-- Team Start -->
-    @include('frontend.common.team')
+    {{-- @include('frontend.common.team') --}}
     <!-- Team End -->
 
     <!-- Events Start -->
@@ -30,7 +30,7 @@
     <!-- Events End -->
     
     <!-- Testimonial Start -->
-    @include('frontend.common.testimonial')
+    {{-- @include('frontend.common.testimonial') --}}
     <!-- Testimonial End -->
 
     <!-- Latest News Start -->
@@ -38,6 +38,6 @@
     <!-- Latest News End -->
     
     <!-- RS Gallery section start -->
-    @include('frontend.common.gallery')
+    {{-- @include('frontend.common.gallery') --}}
     <!-- RS Gallery section end -->
 @endsection
