@@ -16,7 +16,7 @@ class RazorpayPaymentController extends Controller
      */
     public function index()
     {        
-        return view('razorpayView');
+        return view('payment-gateway.razorpayView');
     }
   
     /**

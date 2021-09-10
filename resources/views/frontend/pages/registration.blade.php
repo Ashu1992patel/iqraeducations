@@ -28,55 +28,58 @@
         <div class="contact-comment-section">
             <h3>Student Register</h3>
             <div id="form-messages"></div>
-            <form id="contact-form" method="post" action="mailer.php">
+            <form id="contact-form" method="post" action="{{ route('register') }}" method="post">
+                @csrf
                 <fieldset>
                     <div class="row">                                      
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>First Name*</label>
-                                <input name="fname" id="fname" class="form-control" type="text">
+                                <label>Name*</label>
+                                <input name="name" id="name" class="form-control" type="text">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Last Name*</label>
-                                <input name="lname" id="lname" class="form-control" type="text">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Create Password*</label>
+                                        <input name="password" id="password" class="form-control" type="password">
+                                    </div>                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Create Password*</label>
+                                        <input name="password" id="password" class="form-control" type="password">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">                                      
                         <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Date of Birth*</label>
-                                <input name="dob" id="dob" class="form-control" type="date">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Date of Birth*</label>
+                                        <input name="dob" id="dob" class="form-control" type="date">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select name="gender" id="gender" class="form-control" >
+                                            <option value="female">Female</option>
+                                            <option value="male">Male</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Preferred Course </label>
-                                <select name="course" id="course" class="form-control">
-                                    <option value="-1">-Select Course-</option>
-                                    <option value="1">Quran with Nazira with/without Urdu Language (Live)</option>
-                                    <option value="2">Urdu Language (Live)</option>
-                                    <option value="3">Arabic language (Live)</option>
-                                    <option value="4">Hifz e Quran (Live)</option>
-                                    <option value="5">Qirat (Live)</option>
-                                    <option value="6">Short Dars-e-Nizami (Live)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Guardian Name*</label>
-                                <input name="guardian_name" id="guardian_name" class="form-control" type="text">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Guardian Occupation</label>
-                                <input name="guardian_occupation" id="guardian_occupation" class="form-control" type="text">
+                                <label>Address *</label>
+                                <input name="address" id="address" class="form-control" type="text">
                             </div>
                         </div>
                     </div>

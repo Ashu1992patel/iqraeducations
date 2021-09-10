@@ -40,7 +40,7 @@
                                 <li class="{{ request()->is('courses') ? 'current_page_item' : '' }}"> 
                                     <a href="{{ route('courses') }}">Courses</a>
                                     <ul class="sub-menu"> 
-                                        <li class="menu-item-has-children"> <a href="#">Catgeory 1</a>
+                                        {{-- <li class="menu-item-has-children"> <a href="#">Catgeory 1</a>
                                             <ul class="sub-menu">
                                               <li> <a href="{{ route('welcome') }}">Course One</a> </li>
                                               <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
@@ -66,7 +66,21 @@
                                               <li> <a href="{{ route('welcome') }}">Course One</a> </li>
                                               <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
                                             </ul>
+                                          </li>    --}}
+                                          
+                                          
+                                          @foreach (getCategories() as $category)
+                                          <li class="menu-item-has-children"> 
+                                            <a href="#">
+                                              {{ $category->name }}
+                                             </a>
+                                            <ul class="sub-menu">
+                                              <li> <a href="{{ route('welcome') }}">Course One</a> </li>
+                                              <li> <a href="{{ route('welcome') }}">Course Two</a> </li> 
+                                              <li> <a href="{{ route('welcome') }}">Course Three</a> </li>
+                                            </ul>
                                           </li>                                        
+                                          @endforeach
                                     </ul>
                                 </li>                                
                                 <!--Courses Menu End-->

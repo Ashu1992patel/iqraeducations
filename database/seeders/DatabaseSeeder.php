@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +19,8 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             SettingsSeeder::class,
+            CategorySeeder::class,
+            CourseSeeder::class,
         ]);
     }
     

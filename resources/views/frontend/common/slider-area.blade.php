@@ -3,7 +3,7 @@
         <!-- Item 1 -->
         <div class="item active">
             {{-- <img src="{{ url('frontend') }}/images/slider/home5/1_1.jpg" alt="Slide1" /> --}}
-            <img src="{{ url('frontend') }}/images/iqra/slider1.png" alt="Slide1" style="max-width:1833px;max-hieght:758px"  />
+            <img src="{{ url('frontend') }}/images/iqra/slider/madeena2.jpg" alt="Slide1" style="max-width:1833px;max-hieght:758px"  />
             <div class="slide-content">
                 <div class="display-table">
                     <div class="display-table-cell">
@@ -26,7 +26,7 @@
         <!-- Item 2 -->
         <div class="item">
             {{-- <img src="{{ url('frontend') }}/images/slider/home5/1_2.jpg" alt="Slide2" /> --}}
-            <img src="{{ url('frontend') }}/images/iqra/slider2.png" alt="Slide2" style="max-width:1833px;max-hieght:758px" />
+            <img src="{{ url('frontend') }}/images/iqra/slider/makka.jpg" alt="Slide2" style="max-width:1833px;max-hieght:758px" />
             <div class="slide-content">
                 <div class="display-table">
                     <div class="display-table-cell">
