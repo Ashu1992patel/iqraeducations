@@ -116,6 +116,17 @@
                                     </a>
                                 </li>
                                 <!--checkout Menu End-->
+
+                                @auth()
+                                @else
+                                <!--Login Start-->
+                                <li class="{{ request()->is('login') ? 'current_page_item' : '' }}"> 
+                                    <a href="{{ route('login') }}" class="fa fa-sign-in">
+                                        Login
+                                    </a>
+                                </li>
+                                <!--Login End-->
+                                @endauth
                             </ul>
                         </nav>
                         @auth()
@@ -131,7 +142,10 @@
                         </div>
                         @else
                         <div class="apply-box">
-                            <a href="{{ route('registration') }}" class="apply-btn">Login/Register</a>
+                            <a href="{{ route('registration') }}" class="apply-btn ">
+                                <i class="fa fa-graduation-cap"></i>
+                                Register
+                            </a>
                         </div>
                         @endauth
                 </div>
