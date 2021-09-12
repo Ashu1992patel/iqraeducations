@@ -122,10 +122,18 @@
                                 <!--Login Start-->
                                 <li class="{{ request()->is('login') ? 'current_page_item' : '' }}"> 
                                     <a href="{{ route('login') }}" class="fa fa-sign-in">
-                                        Login
+                                        Signin
                                     </a>
                                 </li>
                                 <!--Login End-->
+
+                                <!--Registration Start-->
+                                <li class="{{ request()->is('registration') ? 'current_page_item' : '' }}"> 
+                                    <a href="{{ route('registration') }}" class="fa fa-graduation-cap">
+                                        Signup
+                                    </a>
+                                </li>
+                                <!--Registration End-->
                                 @endauth
                             </ul>
                         </nav>
@@ -143,8 +151,7 @@
                         @else
                         <div class="apply-box">
                             <a href="{{ route('registration') }}" class="apply-btn ">
-                                <i class="fa fa-graduation-cap"></i>
-                                Register
+                                <small>New Registration</small>
                             </a>
                         </div>
                         @endauth

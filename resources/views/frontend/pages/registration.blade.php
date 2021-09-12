@@ -26,35 +26,6 @@
 <div class="contact-page-section sec-spacer">
     <div class="container">
         <div class="contact-comment-section">
-            <h3>Student Login</h3>
-            <div id="form-messages"></div>
-            <form id="contact-form" method="post" action="{{ route('login') }}" method="post">
-                @csrf
-                <fieldset>
-                    <div class="row">                                      
-                        <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Email*</label>
-                                <input name="email" id="email" class="form-control" type="text" value="{{ old('email') }}">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Password*</label>
-                                <input name="password" id="password" class="form-control" type="password">
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="form-group mb-0">
-                        <input class="btn-send" type="submit" value="Login">
-                    </div>                       
-                </fieldset>
-            </form>						
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div class="contact-comment-section">
             <h3>Student Register</h3>
             <div id="form-messages"></div>
             <form id="contact-form" method="post" action="{{ route('register') }}" method="post">

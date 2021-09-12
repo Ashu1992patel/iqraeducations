@@ -12,8 +12,8 @@
                     <div class="event-item">
                         <div class="event-img">
                             {{-- <img src="{{ url('frontend') }}/images/events/kids/kids1.jpg" alt="" /> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/branch1.png" alt="" />
-                            <a class="image-link" href="#" title="IQRA Islamic Education Institue">
+                            <img src="{{ url('frontend') }}/images/partners/partner1.jpg" alt="" />
+                            <a class="image-link" href="javascript:void(0)" title="IQRA Islamic Education Institue">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>
@@ -23,7 +23,7 @@
                                 <span>28 June 2017</span>
                             </div> --}}
                             <h4 class="event-title">
-                                <a href="#">
+                                <a href="javascript:void(0)">
                                     IQRA Islamic Educational Institue
                                 </a>
                             </h4>
@@ -34,19 +34,21 @@
                                 </div> --}}
                                 <div class="event-location">
                                     <i class="fa fa-map-marker"></i>
-                                    <span>Maulana War 7, Panchampura, Jabalpur</span>
+                                    <span>
+                                        Maulana Ward 7, Panchampura, Jabalpur                                        
+                                    </span>
                                 </div>
                             </div>
                             {{-- <div class="event-btn">
-                                <a href="#">Join Event <i class="fa fa-angle-double-right"></i></a>
+                                <a href="javascript:void(0)">Join Event <i class="fa fa-angle-double-right"></i></a>
                             </div> --}}
                         </div>
                     </div>
                     <div class="event-item blue-color">
                         <div class="event-img">
                             {{-- <img src="{{ url('frontend') }}/images/events/kids/kids2.jpg" alt="" /> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/branch2.png" alt="" />
-                            <a class="image-link" href="#" title="IQRA Educational Institue">
+                            <img src="{{ url('frontend') }}/images/partners/partner2.jpg" alt="" />
+                            <a class="image-link" href="javascript:void(0)" title="IQRA Educational Institue">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>
@@ -56,7 +58,7 @@
                                 <span>28 April 2017</span>
                             </div> --}}
                             <h4 class="event-title">
-                                <a href="#">
+                                <a href="javascript:void(0)">
                                 IQRA Educational Institue
                                 </a>
                             </h4>
@@ -73,15 +75,15 @@
                                 </div>
                             </div>
                             {{-- <div class="event-btn">
-                                <a href="#">Join Event <i class="fa fa-angle-double-right"></i></a>
+                                <a href="javascript:void(0)">Join Event <i class="fa fa-angle-double-right"></i></a>
                             </div> --}}
                         </div>
                     </div>
                     <div class="event-item orange-color">
                         <div class="event-img">
                             {{-- <img src="{{ url('frontend') }}/images/events/kids/kids3.jpg" alt="" /> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/branch3.png" alt="" />
-                            <a class="image-link" href="#" title="Jamia Nooriya Lilbanat">
+                            <img src="{{ url('frontend') }}/images/partners/partner3.jpg" alt="" />
+                            <a class="image-link" href="javascript:void(0)" title="Jamia Burhan-Ul-Uloom">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>
@@ -91,42 +93,7 @@
                                 <span>28 June 2017</span>
                             </div> --}}
                             <h4 class="event-title">
-                                <a href="#">
-                                    Jamia Nooriya Lilbanat
-                                </a>
-                            </h4>
-                            <div class="event-meta">
-                                {{-- <div class="event-time">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span>10.30AM-03.30PM</span>
-                                </div> --}}
-                                <div class="event-location">
-                                    <i class="fa fa-map-marker"></i>
-                                    <span>
-                                        Madar Gate, Panchampura, Katangi, Jabalpur
-                                    </span>
-                                </div>
-                            </div>
-                            {{-- <div class="event-btn">
-                                <a href="#">Join Event <i class="fa fa-angle-double-right"></i></a>
-                            </div> --}}
-                        </div>
-                    </div>
-                    <div class="event-item red-color">
-                        <div class="event-img">
-                            {{-- <img src="{{ url('frontend') }}/images/events/kids/kids1.jpg" alt="" /> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/branch4.png" alt="" />
-                            <a class="image-link" href="#" title="Jamia Burhan-Ul-Uloom">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                        <div class="events-details text-center sec-color">
-                            {{-- <div class="event-date">
-                                <i class="fa fa-calendar"></i>
-                                <span>28 June 2017</span>
-                            </div> --}}
-                            <h4 class="event-title">
-                                <a href="#">
+                                <a href="javascript:void(0)">
                                     Jamia Burhan-Ul-Uloom
                                 </a>
                             </h4>
@@ -143,7 +110,42 @@
                                 </div>
                             </div>
                             {{-- <div class="event-btn">
-                                <a href="#">Join Event <i class="fa fa-angle-double-right"></i></a>
+                                <a href="javascript:void(0)">Join Event <i class="fa fa-angle-double-right"></i></a>
+                            </div> --}}
+                        </div>
+                    </div>
+                    <div class="event-item red-color">
+                        <div class="event-img">
+                            {{-- <img src="{{ url('frontend') }}/images/events/kids/kids1.jpg" alt="" /> --}}
+                            <img src="{{ url('frontend') }}/images/partners/partner4.jpg" alt="" />
+                            <a class="image-link" href="javascript:void(0)" title="Jamia Nooriya Lilbanat">
+                                <i class="fa fa-link"></i>
+                            </a>
+                        </div>
+                        <div class="events-details text-center sec-color">
+                            {{-- <div class="event-date">
+                                <i class="fa fa-calendar"></i>
+                                <span>28 June 2017</span>
+                            </div> --}}
+                            <h4 class="event-title">
+                                <a href="javascript:void(0)">
+                                    Jamia Nooriya Lilbanat                                    
+                                </a>
+                            </h4>
+                            <div class="event-meta">
+                                {{-- <div class="event-time">
+                                    <i class="fa fa-clock-o"></i>
+                                    <span>10.30AM-03.30PM</span>
+                                </div> --}}
+                                <div class="event-location">
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>
+                                        Madar Gate, Panchampura, Katangi, Jabalpur                                        
+                                    </span>
+                                </div>
+                            </div>
+                            {{-- <div class="event-btn">
+                                <a href="javascript:void(0)">Join Event <i class="fa fa-angle-double-right"></i></a>
                             </div> --}}
                         </div>
                     </div>
