@@ -13,7 +13,8 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="services-item orange-color rs-animation-hover">
+                {{-- <div class="services-item orange-color rs-animation-hover"> --}}
+                <div class="services-item blue-color rs-animation-hover">
                     <div class="services-icon">
                         <i class="fa fa-book rs-animation-scale-up"></i>
                     </div>
@@ -24,7 +25,8 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="services-item purple-color rs-animation-hover">
+                {{-- <div class="services-item purple-color rs-animation-hover"> --}}
+                <div class="services-item blue-color rs-animation-hover">
                     <div class="services-icon">
                         <i class="fa fa-user rs-animation-scale-up"></i>
                     </div>
@@ -35,7 +37,8 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="services-item red-color rs-animation-hover">
+                {{-- <div class="services-item red-color rs-animation-hover"> --}}
+                <div class="services-item blue-color rs-animation-hover">
                     <div class="services-icon">
                         <i class="fa fa-graduation-cap rs-animation-scale-up"></i>
                     </div>

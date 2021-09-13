@@ -25,14 +25,18 @@
                                 <a href="#">The Quran</a>
                             </h4>
                             <div class="review-wrap">
-                                <ul class="rating">
+                                {{-- <ul class="rating">
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star-half-empty"></li>
-                                </ul>
-                                <span class="review">25 Reviews</span>
+                                </ul> --}}
+                                <span class="review">
+                                    <i>
+                                        H.O.D. Sultan Ahmad Qadri
+                                    </i>
+                                </span>
                             </div>
                             <div class="course-desc">
                                 <p>
@@ -74,14 +78,18 @@
                                 </a>
                             </h4>
                             <div class="review-wrap">
-                                <ul class="rating">
+                                {{-- <ul class="rating">
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star-half-empty"></li>
-                                </ul>
-                                <span class="review">39 Reviews</span>
+                                </ul> --}}
+                                <span class="review">
+                                    <i>
+                                        H.O.D. Mufti Irshad-Ul-Haq Qadri Azhari
+                                    </i>
+                                </span>
                             </div>
                             <div class="course-desc">
                                 <p>
@@ -121,14 +129,18 @@
                                 </a>
                             </h4>
                             <div class="review-wrap">
-                                <ul class="rating">
+                                {{-- <ul class="rating">
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star-half-empty"></li>
-                                </ul>
-                                <span class="review">22 Reviews</span>
+                                </ul> --}}
+                                <span class="review">
+                                    <i>
+                                        H.O.D. Mufti Abdul Qadir Razvi
+                                    </i>
+                                </span>
                             </div>
                             <div class="course-desc">
                                 <p>
@@ -158,7 +170,7 @@
                             <a class="image-link" href="courses-details.html" title="University Tour 2018">
                                 <i class="fa fa-link"></i>
                             </a>
-                            <span class="course-value">₹450</span>
+                            <span class="course-value">₹500</span>
                         </div>
                         <div class="course-body">
                             {{-- <a href="#" class="course-category">Science</a> --}}
@@ -168,14 +180,18 @@
                                 </a>
                             </h4>
                             <div class="review-wrap">
-                                <ul class="rating">
+                                {{-- <ul class="rating">
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star-half-empty"></li>
-                                </ul>
-                                <span class="review">22 Reviews</span>
+                                </ul> --}}
+                                <span class="review">
+                                    <i>
+                                        H.O.D. Mufti Sarfaraz Noori 
+                                    </i>
+                                </span>
                             </div>
                             <div class="course-desc">
                                 <p>
