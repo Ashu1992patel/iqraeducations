@@ -10,50 +10,50 @@
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/1.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo1.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-1.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/2.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo2.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-2.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/3.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo3.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-3.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/4.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo4.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-4.png" alt="Partner Image">
                 </a>
             </div>
 
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/1.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo1.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-1.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/2.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo2.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-2.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/3.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo3.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-3.png" alt="Partner Image">
                 </a>
             </div>
             <div class="partner-item">
                 <a href="#">
                     {{-- <img src="{{ url('frontend') }}/images/partner/4.png" alt="Partner Image"> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo4.png" alt="Partner Image">
+                    <img src="{{ url('frontend') }}/images/branch-logo/branch-logo-4.png" alt="Partner Image">
                 </a>
             </div>
         </div>
