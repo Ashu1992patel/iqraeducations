@@ -1720,7 +1720,8 @@
     <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
         <!--begin::Header-->
         <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
-            <h3 class="font-weight-bold m-0">User Profile
+            <h3 class="font-weight-bold m-0">
+                User Profile
                 <small class="text-muted font-size-sm ml-2">12 messages</small></h3>
             <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
                 <i class="ki ki-close icon-xs text-muted"></i>
@@ -1736,8 +1737,12 @@
                     <i class="symbol-badge bg-success"></i>
                 </div>
                 <div class="d-flex flex-column">
-                    <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">James Jones</a>
-                    <div class="text-muted mt-1">Application Developer</div>
+                    <a href="javascript:void(0);" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
+                        {{ auth()->user()->name }}                        
+                    </a>
+                    <div class="text-muted mt-1">
+                       Role: {{ auth()->user()->roles->name }}
+                    </div>
                     <div class="navi mt-2">
                         <a href="#" class="navi-item">
                             <span class="navi-link p-0 pb-2">
@@ -1754,10 +1759,20 @@
                                         <!--end::Svg Icon-->
                                     </span>
                                 </span>
-                                <span class="navi-text text-muted text-hover-primary">jm@softplus.com</span>
+                                <span class="navi-text text-muted text-hover-primary">
+                                    {{ auth()->user()->email }}
+                                </span>
                             </span>
                         </a>
-                        <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    this.closest('form').submit(); " role="button" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">
+                                <i class="fa fa-sign-out"></i>
+                                {{ __('Log Out') }}                                  
+                            </a>
+                        </form>
+                        
                     </div>
                 </div>
             </div>

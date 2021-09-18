@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\RazorpayPaymentController;
 use App\Http\Controllers\TemporaryController;
+use Illuminate\Support\Facades\Auth;
 
 // Ashish Patel Demo
 // Frontend Welcome Page Route
@@ -44,9 +45,16 @@ Route::get('/auth/callback', function () {
 //  Socialite Route Ends...
 
 // Jetstream Routes
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('dashboard', function () {
+        if (Auth::check() && Auth::user()->role_id == 3) {
+            return redirect()->route('iqra.samad');
+        } elseif (Auth::check() && Auth::user()->role_id == 2) {
+            return view('dashboard');
+            // $this->redirectTo = route('user.dashboard');
+        }
+    })->name('dashboard');
+});
 
 // Start Payment Gateway Example
 // you can get testing card for razorpay from here: https://razorpay.com/docs/payment-gateway/test-card-upi-details/
@@ -59,7 +67,7 @@ Route::post('razorpay-payment', [RazorpayPaymentController::class, 'store'])->na
 
 Route::get('/samad', function () {
     return view('backend.app');
-});
+})->name('iqra.samad');
 
 // Fallback Address
 Route::fallback(function () {

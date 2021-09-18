@@ -32,6 +32,7 @@ class User extends Authenticatable
         'course_id',
         'email',
         'password',
+        'role_id',
     ];
 
     /**
@@ -63,4 +64,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    protected $with = [
+        'roles'
+    ];
+
+    public function roles()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
 }

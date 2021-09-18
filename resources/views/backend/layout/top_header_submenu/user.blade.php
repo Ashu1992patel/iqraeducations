@@ -4,11 +4,11 @@
             Hi,
         </span>
         <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">
-            Sean
+            {{ auth()->user()->name }}
         </span>
         <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
             <span class="symbol-label font-size-h5 font-weight-bold">
-                S
+                {{ substr(auth()->user()->name, 0, 1) }}     
             </span>
         </span>
     </div>
