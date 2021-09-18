@@ -56,6 +56,11 @@ Route::get('razorpay-payment', [RazorpayPaymentController::class, 'index']);
 Route::post('razorpay-payment', [RazorpayPaymentController::class, 'store'])->name('razorpay.payment.store');
 // Ends...
 
+
+Route::get('/samad', function () {
+    return view('backend.app');
+});
+
 // Fallback Address
 Route::fallback(function () {
     return view('frontend.pages.fallback');
