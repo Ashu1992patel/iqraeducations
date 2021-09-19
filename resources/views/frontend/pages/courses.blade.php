@@ -29,10 +29,18 @@
             <h2>OUR COURSES</h2>
         </div>
         <div class="gridFilter">
-            <button class="active" data-filter="*">ALL</button>
+            <button class="active" data-filter="*">
+                ALL
+                <small class="badge badge-sm badge-round badge-warning">
+                    {{ count($courses) }}
+                </small>
+            </button>
             @foreach ($categories as $category)
                 <button data-filter=".{{ $category->name }}">
                     {{ $category->name }}
+                    <small class="badge badge-sm badge-round badge-warning">
+                        {{ count($category->courses) }}
+                    </small>
                 </button>
             @endforeach
             {{-- <button data-filter=".filter1">SCIENCE</button>
