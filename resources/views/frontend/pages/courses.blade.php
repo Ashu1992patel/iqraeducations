@@ -78,7 +78,7 @@
                     <div class="course-body">
                         <div class="course-desc">
                             <h4 class="course-title">
-                                <a href="courses-details.html">
+                                <a href="javascript:void(0);">
                                     {{ $course->name }}
                                 </a>
                             </h4>
