@@ -60,7 +60,7 @@
                         </span>
                         <div class="course-toolbar">
                             <h4 class="course-category">
-                                <a href="#">
+                                <a href="javascript:void(0);">
                                      {{ $course->category->name }}
                                 </a>
                             </h4>
