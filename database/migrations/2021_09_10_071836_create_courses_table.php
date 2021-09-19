@@ -20,7 +20,6 @@ class CreateCoursesTable extends Migration
             $table->longText('description')->nullable();
             $table->string('period')->nullable()->comment('Total duration of the course');
             $table->string('duration')->nullable()->comment('Daily classes duration');
-            $table->longText('image')->nullable();
             $table->float('price')->default(500);
             $table->softDeletes();
             $table->timestamps();

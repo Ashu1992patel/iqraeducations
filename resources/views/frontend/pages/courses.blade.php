@@ -58,11 +58,12 @@
                             </h4>
                             <div class="course-date">
                                 <i class="fa fa-calendar"></i> 
-                                28-06-2017
+                                {{-- 28-06-2017 --}}
+                                {{ $course->duration }}
                             </div>
                             <div class="course-duration">
                                 <i class="fa fa-clock-o"></i> 
-                                4 year
+                                {{ $course->period }}
                             </div>
                         </div>
                     </div>
