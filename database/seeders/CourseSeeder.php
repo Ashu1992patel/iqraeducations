@@ -42,7 +42,7 @@ class CourseSeeder extends Seeder
                 'category_id' => $categories[$key],
             ]);
 
-            $course->files()->create([
+            $course->file()->create([
                 'path' => 'frontend/images/courses/' . ++$key . '.jpg',
             ]);
         }
