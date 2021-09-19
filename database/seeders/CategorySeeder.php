@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Faker;
 
 class CategorySeeder extends Seeder
 {
@@ -22,9 +23,15 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($names as $key => $name) {
+            $faker = Faker\Factory::create();
+
             $category = Category::create([
                 'name' => $name,
-                'description' => $name,
+                'description' => $faker->paragraph(2, true),
+            ]);
+
+            $category->files()->create([
+                'path' => 'frontend/images/categories/' . $category->name . '.jpg',
             ]);
         }
     }

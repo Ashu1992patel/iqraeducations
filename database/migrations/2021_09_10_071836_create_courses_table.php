@@ -17,7 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->integer('category_id')->default(1);
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('period')->nullable()->comment('Total duration of the course');
             $table->string('duration')->nullable()->comment('Daily classes duration');
             $table->longText('image')->nullable();

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Course;
 use Illuminate\Database\Seeder;
+use Faker;
 
 class CourseSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class CourseSeeder extends Seeder
      */
     public function run()
     {
-        $courses =[
+        $courses = [
             'Nazira',
             'Urdu Language',
             'Arabic Grammer',
@@ -30,15 +31,20 @@ class CourseSeeder extends Seeder
             'Daura-e-Hifz',
         ];
 
-        $categories =[1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+        $categories = [1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
         foreach ($courses as $key => $course) {
+            $faker = Faker\Factory::create();
+
             $course = Course::create([
                 'name' => $course,
-                'description' => $course,
+                'description' => $faker->paragraph(5, true),
                 'category_id' => $categories[$key],
             ]);
+
+            $course->files()->create([
+                'path' => 'frontend/images/courses/' . ++$key . '.jpg',
+            ]);
         }
-        
     }
 }

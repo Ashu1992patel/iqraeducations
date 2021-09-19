@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\RazorpayPaymentController;
@@ -8,14 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 // Ashish Patel Demo
 // Frontend Welcome Page Route
-Route::get('/', [TemporaryController::class, 'welcome'])->name('welcome');
-Route::get('about', [TemporaryController::class, 'about'])->name('about');
-Route::get('courses', [TemporaryController::class, 'courses'])->name('courses');
-Route::get('course/description', [TemporaryController::class, 'courseDescription'])->name('course/description');
-Route::get('teachers', [TemporaryController::class, 'teachers'])->name('teachers');
-Route::get('teacher/description', [TemporaryController::class, 'teacherDescription'])->name('teacher/description');
-Route::get('contact', [TemporaryController::class, 'contact'])->name('contact');
-Route::get('gallery', [TemporaryController::class, 'gallery'])->name('gallery');
+Route::get('/', [GuestController::class, 'welcome'])->name('welcome');
+Route::get('about', [GuestController::class, 'about'])->name('about');
+Route::get('courses', [GuestController::class, 'courses'])->name('courses');
+Route::get('course/description', [GuestController::class, 'courseDescription'])->name('course/description');
+Route::get('teachers', [GuestController::class, 'teachers'])->name('teachers');
+Route::get('teacher/description', [GuestController::class, 'teacherDescription'])->name('teacher/description');
+Route::get('contact', [GuestController::class, 'contact'])->name('contact');
+Route::get('gallery', [GuestController::class, 'gallery'])->name('gallery');
 Route::get('registration', [TemporaryController::class, 'registration'])->name('registration');
 Route::get('checkout', [TemporaryController::class, 'checkout'])->name('checkout');
 
