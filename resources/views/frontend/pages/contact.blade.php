@@ -57,9 +57,9 @@
                             {{ $settings->where('slug', 'email')->first()->value }}
                         </p>
                     </a>
-                    <a href="www.iqraeducations.com">
+                    <a href="{{ url('/') }}" target="_blank">
                         <p>
-                            {{ url('/') }}
+                            www.iqraeducations.com
                         </p>
                     </a>
                 </div>
