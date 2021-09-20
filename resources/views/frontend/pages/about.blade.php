@@ -23,13 +23,16 @@
 <!-- Breadcrumbs End -->
 
 <!-- History Start -->
+@php 
+$settings = getSetting();
+@endphp
+
 <div class="rs-history sec-spacer">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 rs-vertical-bottom mobile-mb-50">
                 <a href="#">
-                    {{-- <img src="{{ url('frontend') }}/images/about/history.jpg" alt="History Image"/> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/about.png" alt="History Image"/>                    
+                    <img src="{{ url($settings->where('slug', 'history')->first()->file->path) }}" alt="History Image"/>               
                 </a>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -37,9 +40,7 @@
                     <h2>OUR HISTORY</h2>
                 </div>
                 <div class="about-desc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.</p>
-
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to belongs to who fail in their duty.</p>
+                    {!! $settings->where('slug', 'history')->first()->value !!}
                 </div>
             </div>
         </div>
@@ -56,23 +57,19 @@
                     <h2>OUR MISSION</h2>
                 </div>
                 <div class="about-desc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.</p>
-
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, that they cannot fore see the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty.</p>
+                    {!! $settings->where('slug', 'mission_primary')->first()->value !!}
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="row">
                     <div class="col-md-6 mobile-mb-30">
                         <a href="#">
-                            {{-- <img src="{{ url('frontend') }}/images/about/mission1.jpg" alt="Mission Image"/> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/partner-logo3.png" alt="Mission Image"/>
+                            <img src="{{ url($settings->where('slug', 'mission_secondary')->first()->file->path) }}" alt="Mission Image"/>
                         </a> 
                     </div>
                     <div class="col-md-6">
                         <a href="#">
-                            {{-- <img src="{{ url('frontend') }}/images/about/mission2.jpg" alt="Mission Image"/> --}}
-                            <img src="{{ url('frontend') }}/images/iqra/partner-logo2.png" alt="Mission Image"/>
+                            <img src="{{ url($settings->where('slug', 'mission_primary')->first()->file->path) }}" alt="Mission Image"/>
                         </a>                 			
                     </div>
                 </div>
@@ -88,8 +85,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 mobile-mb-50">
                 <div class="vision-img rs-animation-hover">
-                    {{-- <img src="{{ url('frontend') }}/images/about/vision.jpg" alt="img02"/> --}}
-                    <img src="{{ url('frontend') }}/images/iqra/partner-logo1.png" alt="Mission Image" class="mt-10"/>
+                    <img src="{{ url($settings->where('slug', 'vision')->first()->file->path) }}" alt="Vision Image" class="mt-10"/>
                     {{-- <a class="popup-youtube rs-animation-fade" href="https://www.youtube.com/watch?v=3f9CAMoj3Ec" title="Video Icon"> --}}
                     </a>
                     <div class="overly-border"></div>
@@ -100,9 +96,7 @@
                     <h2>OUR VISION</h2>
                 </div>
                 <div class="vision-desc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.</p>
-
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to ensue; and equal who fail in their duty.</p>
+                    {!! $settings->where('slug', 'vision')->first()->value !!}
                 </div>
             </div>
         </div>

@@ -14,4 +14,13 @@ class Setting extends Model
         'value',
         'slug',
     ];
+
+    protected $with = [
+        'file',
+    ];
+
+    public function file()
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
 }

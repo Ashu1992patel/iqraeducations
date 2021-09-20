@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Setting;
 
 if (!function_exists('getCategories')) {
     function getCategories()
@@ -16,5 +17,13 @@ if (!function_exists('getCourses')) {
     {
         $courses = Course::with('category')->get();
         return $courses;
+    }
+}
+
+if (!function_exists('getSetting')) {
+    function getSetting()
+    {
+        $setting = Setting::get();
+        return $setting;
     }
 }
