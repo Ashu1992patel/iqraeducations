@@ -23,10 +23,6 @@
 <!-- Breadcrumbs End -->
 
 <!-- History Start -->
-@php 
-$settings = getSetting();
-@endphp
-
 <div class="rs-history sec-spacer">
     <div class="container">
         <div class="row">

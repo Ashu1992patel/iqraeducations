@@ -15,7 +15,8 @@ class GuestController extends Controller
 
     public function about()
     {
-        return view('frontend.pages.about');
+        $settings = getSetting();
+        return view('frontend.pages.about', compact('settings'));
     }
 
     public function courses()
@@ -42,7 +43,8 @@ class GuestController extends Controller
 
     public function contact()
     {
-        return view('frontend.pages.contact');
+        $settings = getSetting();
+        return view('frontend.pages.contact', compact('settings'));
     }
 
     public function gallery()

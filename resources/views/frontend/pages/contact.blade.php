@@ -31,30 +31,39 @@
                 <div class="contact-info contact-address">
                     <i class="fa fa-map-marker"></i>
                     <h4>Address</h4>
-                    <p>503  Old Buffalo Street</p>
-                    <p>Northwest #205, New York-3087</p>
+                    <p>
+                        {{ $settings->where('slug', 'address')->first()->value }}                       
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-info contact-phone">
                     <i class="fa fa-phone"></i>
                     <h4>Phone Number</h4>
-                    <a href="tel:+3453-909-6565">+3453-909-6565</a>
-                    <a href="tel:+2390-875-2235">+2390-875-2235</a>
+                    <a href="tel:{{ $settings->where('slug', 'primary_contact')->first()->value }}">
+                         {{ $settings->where('slug', 'primary_contact')->first()->value }}                        
+                    </a>
+                    <a href="tel:{{ $settings->where('slug', 'secondary_contact')->first()->value }}">
+                        {{ $settings->where('slug', 'secondary_contact')->first()->value }}
+                    </a>
                 </div>
             </div>
             <div class="col-md-4 pr-0">
                 <div class="contact-info contact-email">
                     <i class="fa fa-envelope"></i>
                     <h4>Email Address</h4>
-                    <a href="mailto:infoname@gmail.com"><p>infoname@gmail.com</p></a>
-                    <a href="#"><p>www.yourname.com</p></a>
+                    <a href="mailto:{{ $settings->where('slug', 'email')->first()->value }}">
+                        <p>
+                            {{ $settings->where('slug', 'email')->first()->value }}
+                        </p>
+                    </a>
+                    <a href="www.iqraeducations.com"><p>www.iqraeducations.com</p></a>
                 </div>
             </div>
         </div>
 
         <div class="contact-comment-section">
-            <h3>Leave Comment</h3>
+            <h3>Leave Your Message</h3>
             <div id="form-messages"></div>
             <form id="contact-form" method="post" action="mailer.php">
                 <fieldset>
