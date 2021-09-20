@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '06c484e8f8d64297c69076e25fc8ad6fbd15f954',
+        'reference' => '1ceb9ed5433cc2f87d290210519a3d7e954ba644',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -174,6 +174,15 @@
             'aliases' => array(),
             'reference' => 'a8ccedc7ca95189ead0e407c43b530dc17791d6a',
             'dev_requirement' => false,
+        ),
+        'fruitcake/laravel-telescope-toolbar' => array(
+            'pretty_version' => 'v1.3.1',
+            'version' => '1.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fruitcake/laravel-telescope-toolbar',
+            'aliases' => array(),
+            'reference' => '929379119881e959e018528d0d820ac5f2c21b76',
+            'dev_requirement' => true,
         ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.0.1',
@@ -463,7 +472,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '06c484e8f8d64297c69076e25fc8ad6fbd15f954',
+            'reference' => '1ceb9ed5433cc2f87d290210519a3d7e954ba644',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

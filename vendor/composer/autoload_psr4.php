@@ -83,6 +83,7 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
+    'Fruitcake\\TelescopeToolbar\\' => array($vendorDir . '/fruitcake/laravel-telescope-toolbar/src'),
     'Fruitcake\\Cors\\' => array($vendorDir . '/fruitcake/laravel-cors/src'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
     'Facade\\Ignition\\' => array($vendorDir . '/facade/ignition/src'),
