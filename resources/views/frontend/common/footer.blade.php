@@ -1,3 +1,6 @@
+@php
+    $settings = getSetting();
+@endphp
 <footer id="rs-footer" class="bg8 blue-bg rs-footer">
     <div class="blue-overlay"></div>
     <div class="container">
@@ -9,8 +12,7 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-desc">
-                            Maulana Ward No. 7, Panchampura<br>
-                            Near Madar Gate, Katangi, Jabalpur, MP
+                            {{ $settings->where('slug', 'address')->first()->value }}     
                         </p>
                     </div>
                 </div>
@@ -19,8 +21,9 @@
                         <i class="fa fa-phone"></i>
                         <h4 class="contact-title">Phone Number</h4>
                         <p class="contact-desc">
-                            ‎+91-8109223848<br>
-                            ‎+91-8109223849
+                           {{ $settings->where('slug', 'primary_contact')->first()->value }} 
+                           <br>
+                           {{ $settings->where('slug', 'secondary_contact')->first()->value }}
                         </p>
                     </div>
                 </div>
@@ -29,7 +32,8 @@
                         <i class="fa fa-map-marker"></i>
                         <h4 class="contact-title">Email Address</h4>
                         <p class="contact-desc">
-                            info@iqraeducations.com<br>
+                            {{ $settings->where('slug', 'email')->first()->value }}
+                            <br>
                             www.iqraeducations.com
                         </p>
                     </div>
@@ -46,14 +50,11 @@
                     <div class="about-widget">
                         {{-- <img src="{{ url('frontend') }}/images/logo-footer2.png" alt="Footer Logo"> --}}
                         <img src="{{ url('frontend') }}/images/iqra/logo33.png" alt="Footer Logo" style="max-width: 30%">
-                        <p>
-                            {{-- Iqra Islamic Education Centre  --}}
-                            Our vision is to reform our offsprings with the islamic culture along with  professional education.
-                            We are coming with various education which includes Quran, Urdu,arbi,hindi, English, Maths, Chemistry,Phisics  Biology , 10th and 12th
-                        </p>
-                        <p class="margin-remove">
+                        <br>
+                        {!! $settings->where('slug', 'mission_primary')->first()->value !!}
+                        {{-- <p class="margin-remove">
                             Students can choose their respective subject and join our batches.
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
                 
