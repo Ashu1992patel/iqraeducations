@@ -180,10 +180,7 @@ return [
 
         // Custom
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
-
         App\Providers\HelperServiceProvider::class,        // Barryvdh\Debugbar\ServiceProvider::class,
-
-
     ],
 
     /*
@@ -241,9 +238,6 @@ return [
         // Custom
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'Helper' => App\Helpers\Helper::class,
-        // 'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        'Debugbar' => 'Barryvdh\Debugbar\Facade',
-
 
     ],
 
