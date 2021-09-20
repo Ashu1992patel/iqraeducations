@@ -179,11 +179,9 @@ return [
         App\Providers\TelescopeServiceProvider::class,
 
         // Custom
-        'Barryvdh\Debugbar\ServiceProvider',
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
-        App\Providers\HelperServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+        App\Providers\HelperServiceProvider::class,        // Barryvdh\Debugbar\ServiceProvider::class,
 
 
     ],
@@ -241,10 +239,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Custom
-        'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'Helper' => App\Helpers\Helper::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        // 'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 
     ],
