@@ -14,7 +14,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.course.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.course.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        return view('backend.course.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        //
+        return view('backend.course.edit');
     }
 
     /**

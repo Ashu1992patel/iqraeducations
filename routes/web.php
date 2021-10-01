@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\RazorpayPaymentController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TemporaryController;
 use Illuminate\Support\Facades\Auth;
 
@@ -55,6 +57,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             // $this->redirectTo = route('user.dashboard');
         }
     })->name('dashboard');
+
+    // All Admin Route
+    Route::middleware(['admin-middleware', 'verified'])->group(function () {
+        Route::resource('settings', SettingController::class)->names('setting');
+        Route::resource('course', CourseController::class)->names('course');
+    });
 });
 
 // Start Payment Gateway Example

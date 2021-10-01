@@ -14,7 +14,7 @@ class SettingController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.layout.setting.index');
     }
 
     /**
@@ -35,7 +35,8 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Setting::firstOrCreate(['id' => $request->id], $request->validated());
+        return redirect()->back()->with('success', $request->name . ' has been updated successfully.');
     }
 
     /**
@@ -69,7 +70,13 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        try {
+            Setting::firstOrCreate(['id' => $setting->id], $request->validated());
+            return redirect()->back()->with('success', $request->name . ' has been updated successfully.');
+        } catch (\Throwable $th) {
+            //throw $th;
+            return redirect()->back()->with('error', 'Oops! Something went wrong, please try again later.');
+        }
     }
 
     /**
@@ -80,6 +87,8 @@ class SettingController extends Controller
      */
     public function destroy(Setting $setting)
     {
-        //
+        $name = $setting->name;
+        $setting->delete();
+        return redirect()->back()->with('success', $name . ' has been removed successfully.');
     }
 }
