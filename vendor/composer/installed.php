@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-AP01',
-        'version' => 'dev-AP01',
+        'pretty_version' => 'dev-AP02',
+        'version' => 'dev-AP02',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1ceb9ed5433cc2f87d290210519a3d7e954ba644',
+        'reference' => 'cf1d03c41f8564a9f4fcc1e5492adc5e872c658a',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -415,6 +415,15 @@
                 0 => 'v8.56.0',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.0',
+            'version' => '2.7.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'reference' => '9a8cc99d30415ec0b3f7649e1647d03a55698545',
+            'dev_requirement' => false,
+        ),
         'jaybizzle/crawler-detect' => array(
             'pretty_version' => 'v1.2.106',
             'version' => '1.2.106.0',
@@ -467,12 +476,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'dev-AP01',
-            'version' => 'dev-AP01',
+            'pretty_version' => 'dev-AP02',
+            'version' => 'dev-AP02',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1ceb9ed5433cc2f87d290210519a3d7e954ba644',
+            'reference' => 'cf1d03c41f8564a9f4fcc1e5492adc5e872c658a',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
