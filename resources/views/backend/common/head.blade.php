@@ -17,5 +17,5 @@
 <!-- inject:css -->
 <link rel="stylesheet" href="{{ url('backend') }}/css/vertical-layout-light/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="{{ url('backend') }}/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend') }}/images/iqra/favicon01.ico">
 @yield('style')
