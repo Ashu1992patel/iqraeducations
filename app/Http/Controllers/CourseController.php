@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Course;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('backend.course.index');
+        $categories = Category::get();
+        return view('backend.pages.course.index', compact('categories'));
     }
 
     /**
