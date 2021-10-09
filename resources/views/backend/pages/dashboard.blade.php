@@ -1,30 +1,30 @@
 @extends('backend.app')
 @section('title', 'Dashboard')
 @section('content')
-
+    
 <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="{{ url('backend') }}#/overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="{{ url('backend') }}#/audiences" role="tab" aria-selected="false">Audiences</a>
+                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab" aria-selected="false">Audiences</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="{{ url('backend') }}#/demographics" role="tab" aria-selected="false">Demographics</a>
+                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab" aria-selected="false">Demographics</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="{{ url('backend') }}#/more" role="tab" aria-selected="false">More</a>
+                      <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab" aria-selected="false">More</a>
                     </li>
                   </ul>
                   <div>
                     <div class="btn-wrapper">
-                      <a href="{{ url('backend') }}#"/ class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
-                      <a href="{{ url('backend') }}#"/ class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
-                      <a href="{{ url('backend') }}#"/ class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                      <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                      <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
                     </div>
                   </div>
                 </div>
@@ -156,11 +156,11 @@
                                       <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This month </button>
                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                         <h6 class="dropdown-header">Settings</h6>
-                                        <a class="dropdown-item" href="{{ url('backend') }}#">/Action</a>
-                                        <a class="dropdown-item" href="{{ url('backend') }}#">/Another action</a>
-                                        <a class="dropdown-item" href="{{ url('backend') }}#">/Something else here</a>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="{{ url('backend') }}#">/Separated link</a>
+                                        <a class="dropdown-item" href="#">Separated link</a>
                                       </div>
                                     </div>
                                   </div>
@@ -184,7 +184,7 @@
                                   <h3 class="text-white upgrade-info mb-0">
                                     Enhance your <span class="fw-bold">Campaign</span> for better outreach
                                   </h3>
-                                  <a href="{{ url('backend') }}#"/ class="btn btn-info upgrade-btn">Upgrade Account!</a>
+                                  <a href="#" class="btn btn-info upgrade-btn">Upgrade Account!</a>
                                 </div>
                               </div>
                             </div>
@@ -453,7 +453,7 @@
                                 <div class="list align-items-center pt-3">
                                   <div class="wrapper w-100">
                                     <p class="mb-0">
-                                      <a href="{{ url('backend') }}#"/ class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
+                                      <a href="#" class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
                                     </p>
                                   </div>
                                 </div>
@@ -514,7 +514,7 @@
                                 <div class="list align-items-center pt-3">
                                   <div class="wrapper w-100">
                                     <p class="mb-0">
-                                      <a href="{{ url('backend') }}#"/ class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
+                                      <a href="#" class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
                                     </p>
                                   </div>
                                 </div>
@@ -624,7 +624,7 @@
                                           <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Month Wise </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                                             <h6 class="dropdown-header">week Wise</h6>
-                                            <a class="dropdown-item" href="{{ url('backend') }}#">/Year Wise</a>
+                                            <a class="dropdown-item" href="#">Year Wise</a>
                                           </div>
                                         </div>
                                       </div>
