@@ -75,7 +75,7 @@ Route::post('razorpay-payment', [RazorpayPaymentController::class, 'store'])->na
 
 
 Route::get('/samad', function () {
-    return view('backend.app');
+    return view('backend.pages.dashboard');
 })->name('iqra.samad');
 
 // Fallback Address
