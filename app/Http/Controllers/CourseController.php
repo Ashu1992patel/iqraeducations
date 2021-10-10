@@ -56,7 +56,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('backend.pages.course.show');
+        return view('backend.pages.course.show', compact('course'));
     }
 
     /**

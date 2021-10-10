@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
@@ -49,14 +50,7 @@ Route::get('/auth/callback', function () {
 
 // Jetstream Routes
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        if (Auth::check() && Auth::user()->role_id == 3) {
-            return redirect()->route('iqra.samad');
-        } elseif (Auth::check() && Auth::user()->role_id == 2) {
-            return view('dashboard');
-            // $this->redirectTo = route('user.dashboard');
-        }
-    })->name('dashboard');
+    Route::get('dashboard', [AppController::class, 'dashboard'])->name('dashboard');
 
     // All Admin Route
     Route::middleware(['admin-middleware', 'verified'])->group(function () {
@@ -73,10 +67,6 @@ Route::get('razorpay-payment', [RazorpayPaymentController::class, 'index']);
 Route::post('razorpay-payment', [RazorpayPaymentController::class, 'store'])->name('razorpay.payment.store');
 // Ends...
 
-
-Route::get('/samad', function () {
-    return view('backend.pages.dashboard');
-})->name('iqra.samad');
 
 // Fallback Address
 Route::fallback(function () {

@@ -3,7 +3,11 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Courses</h4>
+                <h4 class="card-title">
+                    <a class="btn btn-primary" href="{{ route('course.create') }}">
+                        Add New Course
+                    </a>
+                </h4>
                 <p class="card-description">List of<code>All Courses</code></p>
                 <div class="table-responsive">
                     <!-- table-bordered -->
@@ -13,6 +17,7 @@
                                 <th>S.No.</th>
                                 <th>Action</th>
                                 <th>Name</th>
+                                <th>Price</th>
                                 <th>Period</th>
                                 <th>Duration</th>
                                 <th>Language</th>
@@ -42,6 +47,9 @@
                                 </td>
                                 <td>
                                     {{ $course->name }}
+                                </td>
+                                <td>
+                                    {{ '₹ '.$course->price }}
                                 </td>
                                 <td>
                                     {{ $course->period }}

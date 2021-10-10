@@ -27,3 +27,14 @@ if (!function_exists('getSetting')) {
         return $setting;
     }
 }
+
+if (!function_exists('active')) {
+    function active($uri = '')
+    {
+        $active = '';
+        if (request()->routeIs($uri)) {
+            $active = 'active';
+        }
+        return $active;
+    }
+}
