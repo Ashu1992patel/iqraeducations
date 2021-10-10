@@ -18,4 +18,30 @@
 <link rel="stylesheet" href="{{ url('backend') }}/css/vertical-layout-light/style.css">
 <!-- endinject -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend') }}/images/iqra/favicon01.ico">
+
+<link rel="stylesheet" href="{{ url('backend') }}/vendors/select2/select2.min.css">
+
+<!-- <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script> -->
+
+<!-- Editor Starts... -->
+<script src="https://cdn.tiny.cloud/1/r7aiezlgnuoltwq7qip7lxstpus9zuduex1kv7hyiat2enqt/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: '.editor',
+        plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+        toolbar_mode: 'floating',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+    });
+</script>
+<!-- Editor Ends... -->
+
+
+<style>
+    .error {
+        color: red !important;
+        font-size: 10px !important;
+    }
+</style>
 @yield('style')

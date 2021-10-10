@@ -54,7 +54,7 @@
                   <div class="course-item">
                     <div class="course-img">
                         {{-- <img src="{{ url('frontend') }}/images/courses/10.jpg" alt="" /> --}}
-                        <img src="{{ url($course->file->path) }}" alt="{{ $course->category->name }} - {{ $course->name }}" />
+                        <img src="{{ isset($course->file)? url($course->file->path):url('frontend').'/images/iqra/about.png' }}" alt="{{ $course->category->name }} - {{ $course->name }}" />
                         <span class="course-value">
                             {{ config('global.CURRENCY').$course->price }}
                         </span>
@@ -83,7 +83,7 @@
                                 </a>
                             </h4>
                             <p>
-                                {{ $course->ShortDescription }}
+                                {!! $course->ShortDescription !!}
                             </p>
                         </div>
                     </div>

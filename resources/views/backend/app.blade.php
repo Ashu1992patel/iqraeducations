@@ -4,8 +4,9 @@
 <head>
   @include('backend.common.head')
 </head>
+
 <body>
-  <div class="container-scroller"> 
+  <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     @include('backend.common.navbar')
     <!-- partial -->
@@ -18,6 +19,18 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+          @if(session()->has('success'))
+          <div class="alert alert-info card card-body" id="myDiv">
+            <!-- <div class="row"> -->
+              <!-- <div class="col-sm-1">
+                <span class="error" align="right" onclick="document.getElementById('myDiv').style.display='none'" id='close'>x</span>
+              </div> -->
+              <!-- <div class="col-sm-11"> -->
+                {{ session()->get('success') }}
+              <!-- </div> -->
+            <!-- </div> -->
+          </div>
+          @endif
           @yield('content')
         </div>
         <!-- content-wrapper ends -->

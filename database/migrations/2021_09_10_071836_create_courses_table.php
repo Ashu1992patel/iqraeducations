@@ -18,9 +18,12 @@ class CreateCoursesTable extends Migration
             $table->string('name')->nullable();
             $table->integer('category_id')->default(1);
             $table->longText('description')->nullable();
+            $table->longText('requirement')->nullable();
             $table->string('period')->nullable()->comment('Total duration of the course');
             $table->string('duration')->nullable()->comment('Daily classes duration');
             $table->float('price')->default(500);
+            $table->tinyInteger('assessment')->default(0);
+            $table->string('language')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -11,7 +11,15 @@ class Course extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description', 'category_id', 'price'
+        'name',
+        'category_id',
+        'description',
+        'requirement',
+        'period',
+        'duration',
+        'price',
+        'assessment',
+        'language',
     ];
 
     public function category()
@@ -29,5 +37,13 @@ class Course extends Model
     {
         $description = Str::limit($this->description, 120, '...');
         return $description;
+    }
+
+    // Accessor for fetching a Assessment
+    public function getCustomAssessmentAttribute()
+    {
+        if ($this->assessment)
+            return 'Yes';
+        return 'No';
     }
 }
