@@ -2,8 +2,8 @@
 @section('title', 'Course Description')
 @section('content')
 
-<!-- Breadcrumbs Start -->
-{{-- <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+    <!-- Breadcrumbs Start -->
+    {{-- <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
     <div class="breadcrumbs-inner">
         <div class="container">
             <div class="row">
@@ -20,85 +20,89 @@
         </div>
     </div>
 </div> --}}
-<!-- Breadcrumbs End -->
+    <!-- Breadcrumbs End -->
 
-<!-- Courses Details Start -->
-<div class="rs-courses-details pt-100 pb-70">
-    <div class="container">
-        <div class="row mb-30">
-            <div class="col-lg-8 col-md-12">
-                <div class="detail-img">
-                    <img src="{{ url('frontend') }}/images/courses/courses-details.jpg" alt="Courses Images" />
-                    <div class="course-seats price">
-                        $50.0
+    <!-- Courses Details Start -->
+    <div class="rs-courses-details pt-100 pb-70">
+        <div class="container">
+            <div class="row mb-30">
+                <div class="col-lg-8 col-md-12">
+                    <div class="detail-img">
+                        <img src="{{ $course->image }}"
+                            alt="Courses Images" />
+                        <div class="course-seats price">
+                            {{ config('global.CURRENCY') . $course->price }}
+                        </div>
+                        {{-- <div class="course-seats">
+                        170 
+                        <span>SEATS</span>
+                    </div> --}}
                     </div>
-                    <div class="course-seats">
-                        170 <span>SEATS</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <ul class="course-meta-style">
-                            <li class="author">
-                                <div class="image">
-                                    <img src="{{ url('frontend') }}/images/teachers/2.jpg" width="60"  alt="">
-                                </div>
-                                <div class="author-name">
-                                    <a href="#">Alex Hilfisher</a>
-                                    <p>Teacher</p>
-                                </div>
-                            </li>
-                            <li class="categories">
-                                <a href="#" class="course-name">Spoken English</a>
-                                <p>Categories</p>
-                            </li>
-                            <li>
-                                4 Reviews
-                                <div class="client-rating">
-                                    <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="btn-area">
-                            <a href="#">Enroll This Course</a>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <ul class="course-meta-style">
+                                <li class="author">
+                                    <div class="image">
+                                        <img src="{{ url('frontend') . '/images/iqra/favicon01.ico' }}" width="50" alt="">
+                                    </div>
+                                    <div class="author-name">
+                                        <a href="#">
+                                            {{ $course->teacher->name ?? 'NA' }}
+                                        </a>
+                                        <p>Teacher</p>
+                                    </div>
+                                </li>
+                                <li class="categories">
+                                    <a href="#" class="course-name">{{ $course->category->name }}</a>
+                                    <p>Categories</p>
+                                </li>
+                                <li>
+                                    <a href="#" class="course-name">{{ $course->name }}</a>                                    
+                                    <div class="client-rating">
+                                        <p>Course</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn-area">
+                                <a href="{{ route('register') }}" title="{{ $course->name }}">Enroll This Course</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="course-des-tabs">
-                            <div class="tab-btm">
-                                <!-- Nav tabs -->
-                                <div class="tabs-wrapper">
-                                    <ul class="nav classic-tabs tabs-cyan" role="tablist">
-                                        <li class="nav-item"> 
-                                            <a class="nav-link waves-light active" data-toggle="tab" href="#panel51" role="tab">Description</a> 
-                                        </li>
-                                        <li class="nav-item"> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="course-des-tabs">
+                                <div class="tab-btm">
+                                    <!-- Nav tabs -->
+                                    <div class="tabs-wrapper">
+                                        <ul class="nav classic-tabs tabs-cyan" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link waves-light active" data-toggle="tab" href="#panel51"
+                                                    role="tab">Description</a>
+                                            </li>
+                                            {{-- <li class="nav-item"> 
                                             <a class="nav-link waves-light" data-toggle="tab" href="#curriculum" role="tab">Curriculum</a> 
-                                        </li>
-                                        <li class="nav-item"> 
-                                            <a class="nav-link waves-light" data-toggle="tab" href="#instructors" role="tab">Instructors</a> 
-                                        </li>
-                                        <li class="nav-item"> 
-                                            <a class="nav-link waves-light" data-toggle="tab" href="#review" role="tab">Review</a> 
-                                        </li>
-                                    </ul>
+                                        </li> --}}
+                                            {{-- <li class="nav-item">
+                                                <a class="nav-link waves-light" data-toggle="tab" href="#"
+                                                    role="tab"></a>
+                                            </li> --}}
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Tab panels -->
-                            <div class="tab-content card"> 
-                                <!--Panel 1-->
-                                <div class="tab-pane fade in active show" id="panel51" role="tabpanel">
-                                  <h4 class="desc-title">Course Details</h4>
-                                    <p>Donec lorem leo, gravida ut cursus et, ultrices non tortor. Duis vel venenatis ligula. Etiam hendrerit at urna ac tempus. Integer sagittis luctus tellus, eu molestie magna volutpat quis. Praesent ullamcorper faucibus quam. Nam sed facilisis neque. Etiam dictum dolor et volutpat malesuada. Aliquam molestie felis in justo feugiat semper. In magna arcu, luctus a nisl et, mollis ultricies sem. Etiam cursus mi eget tellus ultrices fermentum. Vestibulum tempor erat ac eros egestas rutrum.</p>
-                                    
-                                    <p>Aliquam pulvinar blandit eros, vel tempor tellus eleifend eget. Vestibulum ultricies egestas ante, eu consectetur leo pretium vel. Aliquam mollis dolor libero, ac sagittis velit dignissim at. Nulla a tellus eu enim porta posuere. Sed posuere at lectus ac fringilla.</p>
-                                  <h4 class="desc-title">Requirements</h4>
-                                  <ul class="requirements-list">
-                                    <li>Lorem ipsum dolor sit elit</li>
+                                <!-- Tab panels -->
+                                <div class="tab-content card">
+                                    <!--Panel 1-->
+                                    <div class="tab-pane fade in active show" id="panel51" role="tabpanel">
+                                        <h4 class="desc-title">Course Details</h4>
+                                        {!! $course->description !!}
+                                        <hr>
+
+                                        <h4 class="desc-title">Requirements</h4>
+                                        <div class="requirements-list">
+                                            {!! $course->requirement !!}
+                                            {{-- <li>Lorem ipsum dolor sit elit</li>
                                     <li>Sed posuere at lectus ac fringilla</li>
                                     <li>Aliquam mollis dolor libero</li>
                                     <li>Sagittis velit dignissim</li>
@@ -109,12 +113,12 @@
                                     <li>pariatur. Tempora, placeat ratione</li>
                                     <li>Lorem consectetur adipisicing elit</li>
                                     <li>Nihil odit magnam minima</li>
-                                    <li>Lorem ipsum dolor sit elit</li>
-                                  </ul>
-                              </div>
-                              <!--/.Panel 1--> 
-                              <!--Panel 2-->
-                              <div class="tab-pane fade" id="curriculum" role="tabpanel">
+                                    <li>Lorem ipsum dolor sit elit</li> --}}
+                                        </div>
+                                    </div>
+                                    <!--/.Panel 1-->
+                                    <!--Panel 2-->
+                                    {{-- <div class="tab-pane fade" id="curriculum" role="tabpanel">
                                     <div class="course-syllabus">
                                         <h4 class="desc-title">SECTION 1 : INTRODUCTION</h4>
                                         <div id="accordion" class="rs-accordion-style1">
@@ -226,353 +230,189 @@
                                             </div>
                                         </div>
                                     </div>
-                              </div>
-                              <!--/.Panel 2--> 
-                            
-                              <!--Panel 3-->
-                              <div class="tab-pane fade" id="instructors" role="tabpanel">
-                                  <div class="instructor-list">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/2.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <a href="#"><h4>John Doe</h4></a>
-                                            <span>Professor</span>
-                                            <div class="social-icon">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>    
-                                                </ul>
+                              </div> --}}
+                                    <!--/.Panel 2-->
+
+                                    <!--Panel 3-->
+                                    {{-- <div class="tab-pane fade" id="" role="tabpanel">
+                                        <div class="instructor-list">
+                                            <div class="image">
+                                                <img src="{{ url('frontend') }}/images/teachers/2.jpg" width="150" alt="">
                                             </div>
-                                        </div>
-                                         <p class="dsc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum
-                                        </p>
-                                  </div>
-                                  <div class="instructor-list pt-45">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/9.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <a href="#"><h4>Nuhan Freddy</h4></a>
-                                            <span>Bachelor</span>
-                                            <div class="social-icon">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>    
-                                                </ul>
+                                            <div class="author-name">
+                                                <a href="#">
+                                                    <h4>John Doe</h4>
+                                                </a>
+                                                <span>Professor</span>
+                                                <div class="social-icon">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                         <p class="dsc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum
-                                        </p>
-                                  </div>
-                                  <div class="instructor-list pt-45">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/6.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <a href="#"><h4>Naila Naime</h4></a>
-                                            <span>Bachelor</span>
-                                            <div class="social-icon">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>    
-                                                </ul>
-                                            </div>
-                                        </div>
-                                         <p class="dsc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum
-                                        </p>
-                                  </div>
-                              </div>
-                              <!--/.Panel 3--> 
-                            
-                              <!--Panel 4-->
-                              <div class="tab-pane fade" id="review" role="tabpanel">
-                                    <h4 class="desc-title">Reviews</h4>
-                                    <div class="instructor-list">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/8.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <div class="client-rating">
-                                                <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> 
-                                            </div>
-                                            <a href="#"><h4>Jesika Helan</h4></a>
-                                            <span>Bachelor</span>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour
+                                            <p class="dsc">There are many variations of passages of Lorem Ipsum
+                                                available, but the majority have suffered altera tion in some form, by
+                                                injected humour, or randomised words which don't look even slightly
+                                                believable. If you are going to use a passage of Lorem Ipsum
                                             </p>
                                         </div>
-                                    </div>
-                                    <div class="instructor-list mt-15">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/7.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <div class="client-rating">
-                                                <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> 
+                                        <div class="instructor-list pt-45">
+                                            <div class="image">
+                                                <img src="{{ url('frontend') }}/images/teachers/9.jpg" width="150" alt="">
                                             </div>
-                                            <a href="#"><h4>Alex Hilfisher</h4></a>
-                                            <span>Bachelor</span>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour
+                                            <div class="author-name">
+                                                <a href="#">
+                                                    <h4>Nuhan Freddy</h4>
+                                                </a>
+                                                <span>Bachelor</span>
+                                                <div class="social-icon">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="dsc">There are many variations of passages of Lorem Ipsum
+                                                available, but the majority have suffered altera tion in some form, by
+                                                injected humour, or randomised words which don't look even slightly
+                                                believable. If you are going to use a passage of Lorem Ipsum
                                             </p>
                                         </div>
-                                    </div>
-                                    <div class="instructor-list mt-15">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/4.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <div class="client-rating">
-                                                <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> 
+                                        <div class="instructor-list pt-45">
+                                            <div class="image">
+                                                <img src="{{ url('frontend') }}/images/teachers/6.jpg" width="150" alt="">
                                             </div>
-                                            <a href="#"><h4>Rhusda D’suza</h4></a>
-                                            <span>Bachelor</span>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour
+                                            <div class="author-name">
+                                                <a href="#">
+                                                    <h4>Naila Naime</h4>
+                                                </a>
+                                                <span>Bachelor</span>
+                                                <div class="social-icon">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="dsc">There are many variations of passages of Lorem Ipsum
+                                                available, but the majority have suffered altera tion in some form, by
+                                                injected humour, or randomised words which don't look even slightly
+                                                believable. If you are going to use a passage of Lorem Ipsum
                                             </p>
                                         </div>
-                                    </div>
-                                    <div class="instructor-list mt-15">
-                                        <div class="image">
-                                            <img src="{{ url('frontend') }}/images/teachers/7.jpg" width="150"  alt="">
-                                        </div>
-                                        <div class="author-name">
-                                            <div class="client-rating">
-                                                <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> 
-                                            </div>
-                                            <a href="#"><h4>Eyamin Hossen</h4></a>
-                                            <span>Bachelor</span>
-                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera tion in some form, by injected humour
-                                            </p>
-                                        </div>
-                                    </div>
-                              </div>
-                              <!--/.Panel 4--> 
+                                    </div> --}}
+                                    <!--/.Panel 3-->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="sidebar-area">
-                    <div class="course-features-info">
-                        <h4 class="desc-title">Course Features</h4>
-                        <ul>
-                            <li><i class="fa fa-files-o"></i> <span class="label">Lectures</span> <span class="value">9</span></li>
-                            <li><i class="fa fa-clock-o"></i> <span class="label">Duration</span> <span class="value">1.5 hours</span></li>
-                            <li><i class="fa fa-level-up"></i> <span class="label">Skill level</span> <span class="value">All level</span></li>
-                            <li><i class="fa fa-language"></i> <span class="label">Language</span> <span class="value">English</span></li>
-                            <li><i class="fa fa-users"></i> <span class="label">Students</span> <span class="value">560</span></li>
-                            <li><i class="fa fa-check-square-o"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
-                        </ul>
-                    </div>
-                    <div class="cate-box">
-                        <h3 class="title">Courses Categories</h3>
-                        <ul>
-                            <li>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Learning Centers<span>(05)</span></a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Video Reviews <span>(07)</span></a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Engineering Tech <span>(09)</span></a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#"> Righteous Indignation <span>(08)</span></a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">General Education <span>(04)</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="latest-courses">
-                        <h3 class="title">Latest Courses</h3>
-                        <div class="post-item">
-                            <div class="post-img">
-                                <a href="courses-details.html"><img src="{{ url('frontend') }}/images/blog-details/sm1.jpg" alt="" title="News image"></a>
-                            </div>
-                            <div class="post-desc">
-                                <h4><a href="courses-details.html">Raken develops reporting The software</a></h4>
-                                <span class="duration"> 
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i> 4 Years
-                                </span> 
-                                <span class="price">Price: <span>$350</span></span>
-                            </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="sidebar-area">
+                        <div class="course-features-info">
+                            <h4 class="desc-title">Course Features</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                    <span class="label">
+                                        Period
+                                    </span>
+                                    <span class="value">
+                                        {{ $course->period }}
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                    <span class="label">
+                                        Duration
+                                    </span>
+                                    <span class="value">
+                                        {{ $course->duration }}
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-level-up"></i>
+                                    <span class="label">
+                                        Language
+                                    </span>
+                                    <span class="value">
+                                        {{ $course->language }}
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    <span class="label">
+                                        Assessments
+                                    </span>
+                                    <span class="value">
+                                        {{ $course->custom_assessment }}
+                                    </span>
+                                </li>
+                                {{-- <li><i class="fa fa-users"></i> <span class="label">Students</span> <span class="value">560</span></li> --}}
+                            </ul>
                         </div>
-                        <div class="post-item">
-                            <div class="post-img">
-                                <a href="courses-details.html"><img src="{{ url('frontend') }}/images/blog-details/sm2.jpg" alt="" title="News image"></a>
-                            </div>
-                            <div class="post-desc">
-                                <h4><a href="courses-details.html">Raken develops reporting The software</a></h4>
-                                <span class="duration"> 
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i> 4 Years
-                                </span> 
-                                <span class="price">Price: <span>$350</span></span>
-                            </div>
+                        <div class="cate-box">
+                            <h3 class="title">Courses Categories</h3>
+                            <ul>
+                                @foreach (getCategories() as $category)
+                                    <li>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <a href="#">
+                                            {{ $category->name }}
+                                            <span>
+                                                ({{ count($category->courses) }})
+                                            </span>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <div class="post-item">
-                            <div class="post-img">
-                                <a href="courses-details.html"><img src="{{ url('frontend') }}/images/blog-details/sm3.jpg" alt="" title="News image"></a>
-                            </div>
-                            <div class="post-desc">
-                                <h4><a href="courses-details.html">Raken develops reporting The software</a></h4>
-                                <span class="duration"> 
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i> 4 Years
-                                </span> 
-                                <span class="price">Price: <span>$350</span></span>
-                            </div>
+                        <div class="latest-courses">
+                            <h3 class="title">Latest Courses</h3>
+                            @foreach (getCourses() as $key => $courseItem)
+                                @if ($loop->iteration < 6)
+                                    <div class="post-item">
+                                        <div class="post-img">
+                                            <a href="{{ route('courses.show', $courseItem->id) }}">
+                                                <img src="{{ $courseItem->thumbnail }}"
+                                                    alt="" title="News image">
+                                            </a>
+                                        </div>
+                                        <div class="post-desc">
+                                            <h4>
+                                                <a href="{{ route('courses.show', $courseItem->id) }}">
+                                                    {{ $courseItem->name }}
+                                                </a>
+                                            </h4>
+                                            <span class="duration">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                {{ $courseItem->period }}
+                                            </span>
+                                            <span class="price">Price:
+                                                <span>
+                                                    {{ config('global.CURRENCY') . $courseItem->price }}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
-                    </div>
-                    <div class="tags-cloud clearfix">
-                        <h3 class="title">courses Tags</h3>
-                        <ul>
-                            <li>
-                                <a href="#">SCIENCE</a>
-                            </li>
-                            <li>
-                                <a href="#">HUMANITIES</a>
-                            </li>
-                            <li>
-                                <a href="#">DIPLOMA</a>
-                            </li>
-                            <li>
-                                <a href="#">BUSINESS</a>
-                            </li>
-                            <li>
-                                <a href="#">SPROTS</a>
-                            </li>
-                            <li>
-                                <a href="#">RESEARCH</a>
-                            </li>
-                            <li>
-                                <a href="#">ARTS</a>
-                            </li>
-                            <li>
-                                <a href="#">ADMISSIONS</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container pt-45">    
-        <!-- Testimonial Start -->
-        <div class="related-courses rs-courses-3">
-            <div class="sec-title-2 mb-50">
-                <h2>RELATED COURSES</h2>      
-                <p>Considering primary motivation for the generation of narratives is a useful concept</p>
-            </div>
-            <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="1500" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-ipad-device="2" data-ipad-device-nav="true" data-md-device="3" data-md-device-nav="true">
-                <div class="course-item">
-                    <div class="course-img">
-                        <img src="{{ url('frontend') }}/images/courses/10.jpg" alt="" />
-                        <span class="course-value">$450</span>
-                        <div class="course-toolbar">
-                            <h4 class="course-category"><a href="#">Science</a></h4>
-                            <div class="course-date">
-                                <i class="fa fa-calendar"></i> 28-06-2017
-                            </div>
-                            <div class="course-duration">
-                                <i class="fa fa-clock-o"></i> 4 year
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-body">
-                        <div class="course-desc">
-                            <h4 class="course-title"><a href="courses-details.html">Computer Engineering</a></h4>
-                            <p>
-                                Cras ultricies lacus consectetur, consectetur scelerisque arcu.Curabitur Aenean egestas a
-                                Nullam augue augue.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="course-footer">
-                        <div class="course-seats">
-                            <i class="fa fa-users"></i> 70 SEATS
-                        </div>
-                        <div class="course-button">
-                            <a href="#">APPLY NOW</a>
-                        </div>
-                    </div>
-                </div>						
-                <div class="course-item">
-                    <div class="course-img">
-                        <img src="{{ url('frontend') }}/images/courses/11.jpg" alt="" />
-                        <span class="course-value">$450</span>
-                        <div class="course-toolbar">
-                            <h4 class="course-category"><a href="#">Business</a></h4>
-                            <div class="course-date">
-                                <i class="fa fa-calendar"></i> 28-06-2017
-                            </div>
-                            <div class="course-duration">
-                                <i class="fa fa-clock-o"></i> 4 year
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-body">
-                        <div class="course-desc">
-                            <h3 class="course-title"><a href="#">Business Management</a></h3>
-                            <p>
-                                Cras ultricies lacus consectetur, consectetur scelerisque arcu.Curabitur Aenean egestas a
-                                Nullam augue augue.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="course-footer">
-                        <div class="course-seats">
-                            <i class="fa fa-users"></i> 70 SEATS
-                        </div>
-                        <div class="course-button">
-                            <a href="#">APPLY NOW</a>
-                        </div>
-                    </div>
-                </div>						
-                <div class="course-item">
-                    <div class="course-img">
-                        <img src="{{ url('frontend') }}/images/courses/13.jpg" alt="" />
-                        <span class="course-value">$450</span>
-                        <div class="course-toolbar">
-                            <h4 class="course-category"><a href="#">Diploma</a></h4>
-                            <div class="course-date">
-                                <i class="fa fa-calendar"></i> 28-06-2017
-                            </div>
-                            <div class="course-duration">
-                                <i class="fa fa-clock-o"></i> 4 year
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-body">
-                        <div class="course-desc">
-                            <h3 class="course-title"><a href="#">Diploma Electrical</a></h3>
-                            <p>
-                                Cras ultricies lacus consectetur, consectetur scelerisque arcu.Curabitur Aenean egestas a
-                                Nullam augue augue.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="course-footer">
-                        <div class="course-seats">
-                            <i class="fa fa-users"></i> 70 SEATS
-                        </div>
-                        <div class="course-button">
-                            <a href="#">APPLY NOW</a>
-                        </div>
-                    </div>
-                </div>					
-            </div>               	
-        </div>
-    </div>
-</div>
-<!-- Courses Details End -->
+    <!-- Courses Details End -->
 
 @endsection

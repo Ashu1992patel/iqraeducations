@@ -8,13 +8,13 @@
                 <div class="card-body">
                     <h4 class="card-title">Add New Course</h4>
 
-                    <form class="form-sample" action="{{ route('course.update', $course->id) }}" method="post">
+                    <form class="form-sample" action="{{ route('course.update', $course->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <!-- <p class="card-description">
                             Personal info
                         </p> -->
-                        <div class="row">
+                        <div class="row">                            
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name">Course Name</label>
@@ -140,6 +140,28 @@
                             @if ($errors->has('requirement'))
                                 <div class="error">{{ $errors->first('requirement') }}</div>
                             @endif
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="name">Upload Thumbnail</label>
+                                    <input type="file" class="form-control" id="thumbnail" name="thumbnail"
+                                        value="{{ old('thumbnail', $course->thumbnail) }}" placeholder="Course Thumbnail">
+                                    @if ($errors->has('thumbnail'))
+                                        <div class="error">{{ $errors->first('thumbnail') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="name">Upload Course Image</label>
+                                    <input type="file" class="form-control" id="image" name="image"
+                                        value="{{ old('image', $course->image) }}" placeholder="Course Image">
+                                    @if ($errors->has('image'))
+                                        <div class="error">{{ $errors->first('image') }}</div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             @include('backend.components.goback')

@@ -37,8 +37,8 @@
 
                                 <!--Courses Menu Start-->
                                 <!-- Drop Down -->
-                                <li class="{{ request()->is('courses') ? 'current_page_item' : '' }}"> 
-                                    <a href="{{ route('courses') }}">Courses</a>
+                                <li class="{{ request()->is('courses.index') ? 'current_page_item' : '' }}"> 
+                                    <a href="{{ route('courses.index') }}">Courses</a>
                                     <ul class="sub-menu"> 
                                         {{-- <li class="menu-item-has-children"> <a href="#">Catgeory 1</a>
                                             <ul class="sub-menu">
@@ -77,7 +77,7 @@
                                              <ul class="sub-menu">
                                                 @forelse($category->courses as $course)
                                                 <li>
-                                                    <a href="{{ route('course/description') }}">
+                                                    <a href="{{ route('courses.show', $course->id) }}">
                                                         {{ $course->name }}
                                                     </a>
                                                 </li> 

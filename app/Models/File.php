@@ -9,6 +9,10 @@ class File extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'path'
+    ];
+
     public function fileable()
     {
         return $this->morphTo();

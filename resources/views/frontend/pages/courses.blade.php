@@ -50,11 +50,11 @@
         </div>
         <div class="row grid">
             @foreach ($courses as $course)
-            <div class="col-lg-4 col-md-6 grid-item {{ $course->category->name }}">
+            <div class="col-lg-4 col-md-6 grid-item {{ $course->category->name }}" onclick='window.location.href="{{ route('courses.show', $course->id) }}"'>
                   <div class="course-item">
                     <div class="course-img">
                         {{-- <img src="{{ url('frontend') }}/images/courses/10.jpg" alt="" /> --}}
-                        <img src="{{ isset($course->file)? url($course->file->path):url('frontend').'/images/iqra/about.png' }}" alt="{{ $course->category->name }} - {{ $course->name }}" />
+                        <img src="{{ $course->thumbnail }}" alt="{{ $course->category->name }} - {{ $course->name }}" />
                         <span class="course-value">
                             {{ config('global.CURRENCY').$course->price }}
                         </span>

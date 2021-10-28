@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CourseRequest;
+use App\Http\Requests\CourseUpdateRequest;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\File;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -41,10 +43,18 @@ class CourseController extends Controller
     {
         try {
             $course = Course::create($request->validated());
+            $images = [
+                $request->thumbnail,
+                $request->image
+            ];
+            $path = 'frontend/images/courses/';
+            uploadMorphManyImage($images, $path, $course);
+
             return redirect()->route('course.index')->with('success', 'Yeah! New course has been added successfully.');
         } catch (\Throwable $th) {
-            //throw $th;
-            dd($th->getMessage());
+            throw $th;
+            return redirect()->route('course.create')->with('error', 'Oops! Something went wrong, Please try again later.');
+            // dd($th->getMessage());
         }
     }
 
@@ -78,10 +88,17 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(CourseRequest $request, Course $course)
+    public function update(CourseUpdateRequest $request, Course $course)
     {
         try {
             $course->update($request->validated());
+
+            $images = [
+                $request->thumbnail,
+                $request->image
+            ];
+            $path = 'frontend/images/courses/';
+            uploadUpdateMorphManyImage($images, $path, $course);
             return redirect()->route('course.index')->with('success', 'Yeah! Course details has been updated successfully.');
         } catch (\Throwable $th) {
             //throw $th;

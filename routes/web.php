@@ -8,14 +8,17 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\RazorpayPaymentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TemporaryController;
+use App\Http\Controllers\UserCoursesController;
 use Illuminate\Support\Facades\Auth;
 
 // Ashish Patel Demo
 // Frontend Welcome Page Route
 Route::get('/', [GuestController::class, 'welcome'])->name('welcome');
 Route::get('about', [GuestController::class, 'about'])->name('about');
-Route::get('courses', [GuestController::class, 'courses'])->name('courses');
-Route::get('course/description', [GuestController::class, 'courseDescription'])->name('course/description');
+
+Route::resource('courses', UserCoursesController::class);
+// Route::get('courses', [UserCoursesController::class, 'courses'])->name('courses');
+// Route::get('course/description', [UserCoursesController::class, 'courseDescription'])->name('course/description');
 Route::get('teachers', [GuestController::class, 'teachers'])->name('teachers');
 Route::get('teacher/description', [GuestController::class, 'teacherDescription'])->name('teacher/description');
 Route::get('contact', [GuestController::class, 'contact'])->name('contact');

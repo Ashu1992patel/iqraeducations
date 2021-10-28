@@ -68,7 +68,7 @@
                             <a href="{{ route('about') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a>
                         </li>
                         <li>
-                            <a href="{{ route('courses') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a>
+                            <a href="{{ route('courses.index') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a>
                         </li>                        
                         <li>
                             <a href="{{ route('teachers') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a>

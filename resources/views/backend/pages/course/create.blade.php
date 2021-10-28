@@ -12,7 +12,7 @@
                             {{ session()->get('success') }}
                         </div>
                     @endif
-                    <form class="form-sample" action="{{ route('course.store') }}" method="post">
+                    <form class="form-sample" action="{{ route('course.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- <p class="card-description">
                             Personal info
@@ -138,6 +138,27 @@
                             @if ($errors->has('requirement'))
                                 <div class="error">{{ $errors->first('requirement') }}</div>
                             @endif
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="name">Upload Thumbnail</label>
+                                    <input type="file" class="form-control" id="thumbnail" name="thumbnail" placeholder="Course Thumbnail">
+                                    @if ($errors->has('thumbnail'))
+                                        <div class="error">{{ $errors->first('thumbnail') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="name">Upload Course Image</label>
+                                    <input type="file" class="form-control" id="image" name="image"
+                                        placeholder="Course Image">
+                                    @if ($errors->has('image'))
+                                        <div class="error">{{ $errors->first('image') }}</div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             @include('backend.components.goback')
