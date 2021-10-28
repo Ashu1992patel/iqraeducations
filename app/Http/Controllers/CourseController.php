@@ -93,12 +93,14 @@ class CourseController extends Controller
         try {
             $course->update($request->validated());
 
-            $images = [
-                $request->thumbnail,
-                $request->image
-            ];
-            $path = 'frontend/images/courses/';
-            uploadUpdateMorphManyImage($images, $path, $course);
+            if ($request->has('thumbnail') and $request->has('image')) {
+                $images = [
+                    $request->thumbnail,
+                    $request->image
+                ];
+                $path = 'frontend/images/courses/';
+                uploadUpdateMorphManyImage($images, $path, $course);
+            }
             return redirect()->route('course.index')->with('success', 'Yeah! Course details has been updated successfully.');
         } catch (\Throwable $th) {
             //throw $th;

@@ -34,7 +34,7 @@ class CourseUpdateRequest extends FormRequest
             'price' => 'required|max:255',
             'assessment' => 'required|max:255',
             'language' => 'required|max:255',
-            // 'teacher_id' => 'required',
+            'teacher' => 'required',
         ];
     }
 }

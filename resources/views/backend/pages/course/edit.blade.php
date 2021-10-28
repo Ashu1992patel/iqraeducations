@@ -144,6 +144,16 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
+                                    <label for="teacher">Teacher</label>
+                                    <input type="text" class="form-control" id="teacher" name="teacher"
+                                        value="{{ old('teacher', $course->teacher) }}" placeholder="Provide Teacher Name...">
+                                    @if ($errors->has('teacher'))
+                                        <div class="error">{{ $errors->first('teacher') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
                                     <label for="name">Upload Thumbnail</label>
                                     <input type="file" class="form-control" id="thumbnail" name="thumbnail"
                                         value="{{ old('thumbnail', $course->thumbnail) }}" placeholder="Course Thumbnail">

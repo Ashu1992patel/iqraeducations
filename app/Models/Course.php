@@ -20,6 +20,7 @@ class Course extends Model
         'price',
         'assessment',
         'language',
+        'teacher',
     ];
 
     public function category()

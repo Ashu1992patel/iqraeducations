@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="author-name">
                                         <a href="#">
-                                            {{ $course->teacher->name ?? 'NA' }}
+                                            {{ $course->teacher ?? 'NA' }}
                                         </a>
                                         <p>Teacher</p>
                                     </div>

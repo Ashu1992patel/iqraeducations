@@ -91,6 +91,7 @@ class CourseSeeder extends Seeder
                 'period' => $period[$key],
                 'duration' => $duration[$key],
                 'price' => 500,
+                'teacher' => 'NA',
             ]);
             $course->files()->create([
                 'path' => $path[$key],

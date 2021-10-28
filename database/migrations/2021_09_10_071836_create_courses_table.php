@@ -24,6 +24,7 @@ class CreateCoursesTable extends Migration
             $table->float('price')->default(500);
             $table->tinyInteger('assessment')->default(0);
             $table->string('language')->nullable();
+            $table->string('teacher')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
