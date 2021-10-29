@@ -34,6 +34,10 @@
         // tinycomments_mode: 'embedded',
         // tinycomments_author: 'Author name',
     });
+    setTimeout(() => {
+        $('.tox-tinymce-aux').css("display", "none");
+        $('.tox-tinymce-aux').attr('style', 'display: none'); 
+    }, 5000);
 </script>
 <!-- Editor Ends... -->
 
