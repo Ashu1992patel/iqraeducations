@@ -156,7 +156,7 @@
                                 <div class="form-group">
                                     <label for="name">
                                         Upload Thumbnail 
-                                        <small class="error">(small)</small>
+                                        <small class="error">(small size: 350×255px)</small>
                                     </label>
                                     <input type="file" class="form-control" id="thumbnail" name="thumbnail"
                                         value="{{ old('thumbnail', $course->thumbnail) }}" placeholder="Course Thumbnail">
@@ -169,7 +169,7 @@
                                 <div class="form-group">
                                     <label for="name">
                                         Upload Course Image 
-                                        <small class="error">(large)</small>
+                                        <small class="error">(large size: 730x351px)</small>
                                     </label>
                                     <input type="file" class="form-control" id="image" name="image"
                                         value="{{ old('image', $course->image) }}" placeholder="Course Image">
