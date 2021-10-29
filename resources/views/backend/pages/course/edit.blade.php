@@ -195,11 +195,6 @@
 
 @endsection
 
-<script>
-    $(function(){
-        $('.tox-tinymce-aux').css("display", "none");
-    })
-</script>
 @section('script')
     <!-- Custom js for this page-->
     <script src="{{ url('backend') }}/js/file-upload.js"></script>

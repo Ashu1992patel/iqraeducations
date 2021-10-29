@@ -18,5 +18,9 @@
 <script src="{{ url('backend') }}/js/dashboard.js"></script>
 <script src="{{ url('backend') }}/js/Chart.roundedBarCharts.js"></script>
 <!-- End custom js for this page-->
-
+<script>
+    $(function(){
+        $('.tox-tinymce-aux').css("display", "none");
+    })
+</script>
 @yield('script')
