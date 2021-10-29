@@ -73,6 +73,7 @@ if (!function_exists('uploadUpdateMorphManyImage')) {
     {
         foreach ($model->files as $file) {
             // call the File delete()
+            // unlink($file->path);
             $file->delete();
         }
         if (is_array($images)) {
