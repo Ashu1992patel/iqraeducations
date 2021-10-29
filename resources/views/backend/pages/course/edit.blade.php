@@ -195,18 +195,15 @@
 
 @endsection
 
-
+<script>
+    $(function(){
+        $('.tox-tinymce-aux').css("display", "none");
+    })
+</script>
 @section('script')
     <!-- Custom js for this page-->
     <script src="{{ url('backend') }}/js/file-upload.js"></script>
     <!-- <script src="{{ url('backend') }}/js/typeahead.js"></script> -->
     <script src="{{ url('backend') }}/js/select2.js"></script>
     <!-- End custom js for this page-->
-
-    <script>
-        $(function(){
-            $('.tox-tinymce-aux').css("display", "none");
-        })
-    </script>
-
 @endsection
