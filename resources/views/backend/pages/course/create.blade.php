@@ -152,7 +152,10 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="name">Upload Thumbnail</label>
+                                    <label for="name">
+                                        Upload Thumbnail 
+                                        <small class="error">(small)</small>
+                                    </label>
                                     <input type="file" class="form-control" id="thumbnail" name="thumbnail" placeholder="Course Thumbnail">
                                     @if ($errors->has('thumbnail'))
                                         <div class="error">{{ $errors->first('thumbnail') }}</div>
@@ -161,7 +164,10 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="name">Upload Course Image</label>
+                                    <label for="name">
+                                        Upload Course Image 
+                                        <small class="error">(large)</small>
+                                    </label>
                                     <input type="file" class="form-control" id="image" name="image"
                                         placeholder="Course Image">
                                     @if ($errors->has('image'))
