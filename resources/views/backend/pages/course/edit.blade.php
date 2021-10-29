@@ -6,15 +6,16 @@
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Add New Course</h4>
+                    <h4 class="card-title">Edit Course Details</h4>
 
-                    <form class="form-sample" action="{{ route('course.update', $course->id) }}" method="post" enctype="multipart/form-data">
+                    <form class="form-sample" action="{{ route('course.update', $course->id) }}" method="post"
+                        enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <!-- <p class="card-description">
-                            Personal info
-                        </p> -->
-                        <div class="row">                            
+                                Personal info
+                            </p> -->
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name">Course Name</label>
@@ -80,7 +81,8 @@
                                 <div class="form-group">
                                     <label for="language">Language</label>
                                     <select class="form-control" id="language" name="language" placeholder="Language">
-                                        <option {{ old('language', $course->language) == 'Hindi' ? 'selected' : '' }}>Hindi
+                                        <option {{ old('language', $course->language) == 'Hindi' ? 'selected' : '' }}>
+                                            Hindi
                                         </option>
                                         <option {{ old('language', $course->language) == 'English' ? 'selected' : '' }}>
                                             English</option>
@@ -146,7 +148,8 @@
                                 <div class="form-group">
                                     <label for="teacher">Teacher</label>
                                     <input type="text" class="form-control" id="teacher" name="teacher"
-                                        value="{{ old('teacher', $course->teacher) }}" placeholder="Provide Teacher Name...">
+                                        value="{{ old('teacher', $course->teacher) }}"
+                                        placeholder="Provide Teacher Name...">
                                     @if ($errors->has('teacher'))
                                         <div class="error">{{ $errors->first('teacher') }}</div>
                                     @endif
@@ -155,20 +158,21 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="name">
-                                        Upload Thumbnail 
+                                        Upload Thumbnail
                                         <small class="error">(small size: 350×255px)</small>
                                     </label>
                                     <input type="file" class="form-control" id="thumbnail" name="thumbnail"
-                                        value="{{ old('thumbnail', $course->thumbnail) }}" placeholder="Course Thumbnail">
+                                        value="{{ old('thumbnail', $course->thumbnail) }}"
+                                        placeholder="Course Thumbnail">
                                     @if ($errors->has('thumbnail'))
-                                    <div class="error">{{ $errors->first('thumbnail') }}</div>
+                                        <div class="error">{{ $errors->first('thumbnail') }}</div>
                                     @endif
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="name">
-                                        Upload Course Image 
+                                        Upload Course Image
                                         <small class="error">(large size: 730x351px)</small>
                                     </label>
                                     <input type="file" class="form-control" id="image" name="image"
@@ -198,5 +202,11 @@
     <!-- <script src="{{ url('backend') }}/js/typeahead.js"></script> -->
     <script src="{{ url('backend') }}/js/select2.js"></script>
     <!-- End custom js for this page-->
+
+    <script>
+        $(function(){
+            $('.tox-tinymce-aux').css("display", "none");
+        })
+    </script>
 
 @endsection
