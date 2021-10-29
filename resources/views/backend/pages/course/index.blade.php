@@ -28,21 +28,18 @@
                             <tr>
                                 <th>S.No.</th>
                                 <th>
-                                    Thumbnail
-                                    <small>(small)</small>
+                                    <p style="font-size: 10px;">Thumbnail (small)</p>
                                 </th>
                                 <th>Action</th>
                                 <th>Name</th>
                                 <th>
-                                    Image
-                                    <small>(large)</small>
+                                    <p style="font-size: 10px;">Image (large)</p>
                                 </th>
                                 <th>Price</th>
-                                <th>Period</th>
-                                <th>Duration</th>
+                                <th>Period/Duration</th>
                                 <th>Language</th>
                                 <th>Assessment</th>
-                                <th>Description</th>
+                                {{-- <th>Description</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -60,7 +57,7 @@
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-info dropdown-toggle btn-block" type="button"
+                                            <button class="btn btn-info dropdown-toggle btn-block btn-sm" type="button"
                                                 id="dropdownMenuIconButton6" data-bs-toggle="dropdown"
                                                 aria-haspopup="true" aria-expanded="false">
                                                 <i class="ti-action"></i>
@@ -91,9 +88,8 @@
                                     </td>
                                     <td>
                                         {{ $course->period }}
-                                    </td>
-                                    <td>
-                                        {{ $course->duration }}
+                                    <br>
+                                    {{ $course->duration }}
                                     </td>
                                     <td>
                                         {{ $course->language }}
@@ -103,7 +99,7 @@
                                             {{ $course->customAssessment }}
                                         </label>
                                     </td>
-                                    <td>{!! $course->shortDescription !!}</td>
+                                    {{-- <td>{!! $course->shortDescription !!}</td> --}}
                                 </tr>
                             @empty
                             @endforelse

@@ -80,11 +80,7 @@
                               </td>
                               <td>
                                 <div class="d-flex ">
-                                  @if(isset($course->file) and file_exists($course->file->path))
-                                  <img src="{{ $course->file->path }}" alt="{{ $course->name }}">
-                                  @else
-                                  <img src="{{ url('backend') }}/images/faces/face1.jpg }}" alt="">
-                                  @endif
+                                  <img src="{{ $course->thumbnail }}" alt="{{ $course->name }}">
                                   <div>
                                     <h6>{{ $course->name }}</h6>
                                     <p>{{ $course->category->name }}</p>
@@ -93,7 +89,7 @@
                               </td>
                               <td>
                                 <h6>{{ $course->period }}</h6>
-                                <p>{{ $course->duration }}</p>
+                                <p>{{ $course->teacher }}</p>
                               </td>
                               <td>
                                 <h6>{{ $course->price }}</h6>
